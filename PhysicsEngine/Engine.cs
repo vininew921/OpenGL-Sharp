@@ -1,5 +1,6 @@
 ﻿using GLFW;
 using GlmNet;
+using PhysicsEngine.RenderCamera;
 using PhysicsEngine.Shaders;
 using PhysicsEngine.Structs;
 using PhysicsEngine.Textures;
@@ -15,10 +16,11 @@ namespace PhysicsEngine
         private static VBO vbo;
         private static EBO ebo;
         private static Shader shaderProgram;
-        private static int uniScale;
+        private static readonly int uniScale;
         private static Texture madge;
+        private static Camera camera;
 
-        private static float[] vertices =
+        private static readonly float[] vertices =
         {
             -0.5f, 0, 0.5f, 0.83f, 0.7f, 0.44f, 0, 0,
             -0.5f, 0, -0.5f, 0.83f, 0.7f, 0.44f, 5, 0,
@@ -27,7 +29,7 @@ namespace PhysicsEngine
             0, 0.8f, 0, 0.92f, 0.86f, 0.76f, 2.5f, 5
         };
 
-        private static uint[] indices =
+        private static readonly uint[] indices =
         {
             0, 1, 2,
             0, 2, 3,
@@ -48,10 +50,9 @@ namespace PhysicsEngine
 
         public static unsafe void Run()
         {
-            float rotation = 0;
-            double prevTime = Glfw.Time;
-
             glEnable(GL_DEPTH_TEST);
+
+            camera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, new vec3(0, 0, 2));
 
             while (!Glfw.WindowShouldClose(mainWindow))
             {
@@ -59,31 +60,9 @@ namespace PhysicsEngine
 
                 shaderProgram.Activate();
 
-                double currentTime = Glfw.Time;
-                if(currentTime - prevTime >= 1 / 60)
-                {
-                    rotation += 0.5f;
-                    prevTime = currentTime;
-                }
+                camera.Inputs(mainWindow);
+                camera.Matrix(45, 0.1f, 100, shaderProgram, "camMatrix");
 
-                mat4 model = new mat4(1);
-                mat4 view = new mat4(1);
-                mat4 proj = new mat4(1);
-
-                model = glm.rotate(model, glm.radians(rotation), new vec3(0, 1, 0));
-                view = glm.translate(view, new vec3(0, -0.5f, -2));
-                proj = glm.perspective(glm.radians(45), WINDOW_WIDTH / WINDOW_HEIGHT, 0.1f, 100);
-
-                int modelLoc = glGetUniformLocation(shaderProgram.ID, "model");
-                glUniformMatrix4fv(modelLoc, 1, false, model.to_array());
-
-                int viewLoc = glGetUniformLocation(shaderProgram.ID, "view");
-                glUniformMatrix4fv(viewLoc, 1, false, view.to_array());
-
-                int projLoc = glGetUniformLocation(shaderProgram.ID, "proj");
-                glUniformMatrix4fv(projLoc, 1, false, proj.to_array());
-
-                glUniform1f(uniScale, 0.5f);
                 madge.Bind();
                 vao.Bind();
 
@@ -126,8 +105,6 @@ namespace PhysicsEngine
 
         private static unsafe void SetupShaders()
         {
-
-
             shaderProgram = new Shader("Shaders/Defaults/default.vert", "Shaders/Defaults/default.frag");
 
             vao = new VAO();
@@ -140,8 +117,6 @@ namespace PhysicsEngine
             vao.Unbind();
             vbo.Unbind();
             ebo.Unbind();
-
-            uniScale = glGetUniformLocation(shaderProgram.ID, "scale");
 
             madge = new Texture("Textures/Images/Madge.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA);
             madge.TexUnit(shaderProgram, "tex0", 0);
