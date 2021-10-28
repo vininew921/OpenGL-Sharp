@@ -13,9 +13,12 @@
 
   <ItemGroup>
     <PackageReference Include="glfw-net" Version="3.3.1" />
-    <PackageReference Include="GlmNet" Version="0.7.0" />
     <PackageReference Include="StbiSharp" Version="1.0.13" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\glmnet\source\GlmNet\GlmNet\GlmNet.csproj" />
   </ItemGroup>
 
   <ItemGroup>
