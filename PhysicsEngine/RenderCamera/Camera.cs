@@ -1,6 +1,5 @@
 ﻿using GLFW;
 using GlmNet;
-using PhysicsEngine.Glm;
 using PhysicsEngine.Shaders;
 using static OpenGL.GL;
 
@@ -91,13 +90,13 @@ namespace PhysicsEngine.RenderCamera
                 float rotX = sensitivity * (float)(mouseY - (Height / 2)) / Height;
                 float rotY = sensitivity * (float)(mouseX - (Height / 2)) / Height;
 
-                vec3 newOrientation = GlmHelper.Rotate(Orientation, glm.radians(-rotX), glm.normalize(glm.cross(Orientation, Up)));
-                if (!((GlmHelper.Angle(newOrientation, Up) <= glm.radians(5)) || (GlmHelper.Angle(newOrientation, Up * -1) <= glm.radians(5))))
+                vec3 newOrientation = glm.rotate(Orientation, glm.radians(-rotX), glm.normalize(glm.cross(Orientation, Up)));
+                if (!((glm.angle(newOrientation, Up) <= glm.radians(5)) || (glm.angle(newOrientation, Up * -1) <= glm.radians(5))))
                 {
                     Orientation = newOrientation;
                 }
 
-                Orientation = GlmHelper.Rotate(Orientation, glm.radians(-rotY), Up);
+                Orientation = glm.rotate(Orientation, glm.radians(-rotY), Up);
 
                 Glfw.SetCursorPosition(window, Width / 2, Height / 2);
             }
