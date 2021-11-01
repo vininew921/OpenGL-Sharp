@@ -20,41 +20,22 @@ namespace PhysicsEngine
         private static EBO lightEbo;
         private static Shader shaderProgram;
         private static Shader lightShader;
-        private static Texture madge;
+        private static Texture planeTex;
+        private static Texture planeSpec;
         private static Camera camera;
 
         private static readonly float[] vertices =
         {
-            -0.5f, 0, 0.5f,     0.83f, 0.7f, 0.44f,     0, 0,       0, -1, 0,
-            -0.5f, 0, -0.5f,    0.83f, 0.7f, 0.44f,     0, 5,        0, -1, 0,
-            0.5f, 0, -0.5f,     0.83f, 0.7f, 0.44f,     5, 5,       0, -1, 0,
-            0.5f, 0, 0.5f,      0.83f, 0.7f, 0.44f,     5, 0,       0, -1, 0,
-
-            -0.5f, 0, 0.5f,     0.83f, 0.7f, 0.44f,     0, 0,       -0.8f, 0.5f, 0,
-            -0.5f, 0, -0.5f,    0.83f, 0.7f, 0.44f,     5, 0,       -0.8f, 0.5f, 0,
-            0, 0.8f, 0,         0.92f, 0.86f, 0.76f,    2.5f, 5,    -0.8f, 0.5f, 0,
-
-            -0.5f, 0, -0.5f,    0.83f, 0.7f, 0.44f,     5, 0,       0, 0.5f, -0.8f,
-            0.5f, 0, -0.5f,     0.83f, 0.7f, 0.44f,     0, 0,       0, 0.5f, -0.8f,
-            0, 0.8f, 0,         0.92f, 0.86f, 0.76f,    2.5f, 5,    0, 0.5f, -0.8f,
-
-            0.5f, 0, -0.5f,     0.83f, 0.7f, 0.44f,     0, 0,       0.8f, 0.5f, 0,
-            0.5f, 0, 0.5f,      0.83f, 0.7f, 0.44f,     5, 0,       0.8f, 0.5f, 0,
-            0, 0.8f, 0,         0.92f, 0.86f, 0.76f,    2.5f, 5,    0.8f, 0.5f, 0,
-
-            0.5f, 0, 0.5f,      0.83f, 0.7f, 0.44f,     5, 0,       0, 0.5f, 0.8f,
-            -0.5f, 0, 0.5f,     0.83f, 0.7f, 0.44f,     0, 0,       0, 0.5f, 0.8f,
-            0, 0.8f, 0,         0.92f, 0.86f, 0.76f,    2.5f, 5,    0, 0.5f, 0.8f,
+            -1.0f, 0.0f,  1.0f,     0.0f, 0.0f, 0.0f,       0.0f, 0.0f,     0.0f, 1.0f, 0.0f,
+            -1.0f, 0.0f, -1.0f,     0.0f, 0.0f, 0.0f,       0.0f, 1.0f,     0.0f, 1.0f, 0.0f,
+             1.0f, 0.0f, -1.0f,     0.0f, 0.0f, 0.0f,       1.0f, 1.0f,     0.0f, 1.0f, 0.0f,
+             1.0f, 0.0f,  1.0f,     0.0f, 0.0f, 0.0f,       1.0f, 0.0f,     0.0f, 1.0f, 0.0f
         };
 
         private static readonly uint[] indices =
         {
             0, 1, 2,
-            0, 2, 3,
-            4, 6, 5,
-            7, 9, 8,
-            10, 12, 11,
-            13, 15, 14
+            0, 2, 3
         };
 
         private static readonly float[] lightVertices =
@@ -106,17 +87,19 @@ namespace PhysicsEngine
 
                 camera.Inputs(mainWindow);
                 camera.UpdateMatrix(45, 0.1f, 100);
+
                 shaderProgram.Activate();
+                glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
 
                 camera.Matrix(shaderProgram, "camMatrix");
 
-                madge.Bind();
+                planeTex.Bind();
+                planeSpec.Bind();
                 renderVao.Bind();
 
                 glDrawElements(GL_TRIANGLES, indices.Length, GL_UNSIGNED_INT, IntPtr.Zero.ToPointer());
 
                 lightShader.Activate();
-                glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
 
                 camera.Matrix(lightShader, "camMatrix");
                 lightVao.Bind();
@@ -188,7 +171,7 @@ namespace PhysicsEngine
             lightEbo.Unbind();
 
             vec4 lightColor = new vec4(1f, 1f, 1f, 1f);
-            vec3 lightPos = new vec3(2f, 2f, 2f);
+            vec3 lightPos = new vec3(0.5f, 0.5f, 0.5f);
             mat4 lightModel = new mat4(1f);
             lightModel = glm.translate(lightModel, lightPos);
 
@@ -205,8 +188,11 @@ namespace PhysicsEngine
             glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
 
             //Texture
-            madge = new Texture("Textures/Images/Madge.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA);
-            madge.TexUnit(shaderProgram, "tex0", 0);
+            planeTex = new Texture("Textures/Images/planks.png", GL_TEXTURE_2D, 0, GL_RGBA);
+            planeTex.TexUnit(shaderProgram, "tex0", 0);
+
+            planeSpec = new Texture("Textures/Images/planksSpec.png", GL_TEXTURE_2D, 1, GL_RED);
+            planeSpec.TexUnit(shaderProgram, "tex1", 1);
         }
 
         private static void SetupHints()

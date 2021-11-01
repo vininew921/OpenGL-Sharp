@@ -8,6 +8,7 @@ namespace PhysicsEngine.Textures
     public class Texture
     {
         public uint ID { get; set; }
+        public int unit { get; set; }
         public int Type { get; set; }
 
         public unsafe Texture(string imagePath, int texType, int slot, int format)
@@ -15,8 +16,9 @@ namespace PhysicsEngine.Textures
             Type = texType;
             ID = glGenTexture();
 
-            glActiveTexture(slot);
-            Bind();
+            glActiveTexture(GL_TEXTURE0 + slot);
+            unit = slot;
+            glBindTexture(Type, ID);
 
             glTexParameteri(texType, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
             glTexParameteri(texType, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -52,6 +54,7 @@ namespace PhysicsEngine.Textures
 
         public void Bind()
         {
+            glActiveTexture(GL_TEXTURE0 + unit);
             glBindTexture(Type, ID);
         }
 
