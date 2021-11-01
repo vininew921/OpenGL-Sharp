@@ -16,7 +16,6 @@ namespace PhysicsEngine
         private static VBO vbo;
         private static EBO ebo;
         private static Shader shaderProgram;
-        private static readonly int uniScale;
         private static Texture madge;
         private static Camera camera;
 
