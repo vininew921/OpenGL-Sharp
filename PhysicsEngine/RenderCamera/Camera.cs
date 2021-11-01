@@ -10,6 +10,7 @@ namespace PhysicsEngine.RenderCamera
         public vec3 Position;
         public vec3 Orientation = new vec3(0, 0, -1);
         public vec3 Up = new vec3(0, 1, 0);
+        public mat4 CameraMatrix = new mat4(1);
 
         public int Width;
         public int Height;
@@ -26,12 +27,17 @@ namespace PhysicsEngine.RenderCamera
             Position = position;
         }
 
-        public void Matrix(float FOVdeg, float nearPlane, float farPlane, Shader shader, string uniform)
+        public void UpdateMatrix(float FOVdeg, float nearPlane, float farPlane)
         {
             mat4 view = glm.lookAt(Position, Position + Orientation, Up);
             mat4 projection = glm.perspective(glm.radians(FOVdeg), Width / Height, nearPlane, farPlane);
 
-            glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, false, (projection * view).to_array());
+            CameraMatrix = projection * view;
+        }
+
+        public void Matrix(Shader shader, string uniform)
+        {
+            glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, false, (CameraMatrix).to_array());
         }
 
         public void Inputs(Window window)

@@ -9,7 +9,6 @@ namespace PhysicsEngine.Shaders
         public VAO()
         {
             ID = glGenVertexArray();
-            Bind();
         }
 
         public unsafe void LinkAttrib(VBO vbo, uint layout, int numComponents, int type, int stride, void* offset)
