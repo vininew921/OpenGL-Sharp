@@ -36,7 +36,7 @@ namespace PhysicsEngine.Meshes
                     VAO.LinkAttrib(VBO, 0, 3, GL_FLOAT, 11 * sizeof(float), (void*)0);
                     VAO.LinkAttrib(VBO, 1, 3, GL_FLOAT, 11 * sizeof(float), (void*)(3 * sizeof(float)));
                     VAO.LinkAttrib(VBO, 2, 3, GL_FLOAT, 11 * sizeof(float), (void*)(6 * sizeof(float)));
-                    VAO.LinkAttrib(VBO, 3, 2, GL_FLOAT, 11 * sizeof(float), (void*)(8 * sizeof(float)));
+                    VAO.LinkAttrib(VBO, 3, 2, GL_FLOAT, 11 * sizeof(float), (void*)(9 * sizeof(float)));
                     break;
                 case MeshType.Light:
                     VAO.LinkAttrib(VBO, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
