@@ -9,21 +9,21 @@ namespace PhysicsEngine.Textures
     {
         public uint ID { get; set; }
         public int unit { get; set; }
-        public int Type { get; set; }
+        public string Type { get; set; }
 
-        public unsafe Texture(string imagePath, int texType, int slot, int format)
+        public unsafe Texture(string imagePath, string texType, int slot, int format)
         {
             Type = texType;
             ID = glGenTexture();
 
             glActiveTexture(GL_TEXTURE0 + slot);
             unit = slot;
-            glBindTexture(Type, ID);
+            glBindTexture(GL_TEXTURE_2D, ID);
 
-            glTexParameteri(texType, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-            glTexParameteri(texType, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-            glTexParameteri(texType, GL_TEXTURE_WRAP_S, GL_REPEAT);
-            glTexParameteri(texType, GL_TEXTURE_WRAP_T, GL_REPEAT);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
             using (FileStream stream = File.OpenRead(imagePath))
             {
@@ -36,13 +36,13 @@ namespace PhysicsEngine.Textures
 
                     fixed (void* v = &bytes[0])
                     {
-                        glTexImage2D(texType, 0, GL_RGBA, img.Width, img.Height, 0, format, GL_UNSIGNED_BYTE, v);
+                        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, img.Width, img.Height, 0, format, GL_UNSIGNED_BYTE, v);
                     }
                 }
             }
 
-            glGenerateMipmap(texType);
-            glBindTexture(texType, 0);
+            glGenerateMipmap(GL_TEXTURE_2D);
+            glBindTexture(GL_TEXTURE_2D, 0);
         }
 
         public void TexUnit(Shader shader, string uniform, int unit)
@@ -55,12 +55,12 @@ namespace PhysicsEngine.Textures
         public void Bind()
         {
             glActiveTexture(GL_TEXTURE0 + unit);
-            glBindTexture(Type, ID);
+            glBindTexture(GL_TEXTURE_2D, ID);
         }
 
         public void Unbind()
         {
-            glBindTexture(Type, 0);
+            glBindTexture(GL_TEXTURE_2D, 0);
         }
 
         public void Delete()

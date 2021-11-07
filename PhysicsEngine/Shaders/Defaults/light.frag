@@ -7,4 +7,4 @@ uniform vec4 lightColor;
 void main()
 {
 	FragColor = lightColor;
-};
+}
