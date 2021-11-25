@@ -17,19 +17,10 @@ namespace PhysicsEngine.Shaders
             }
         }
 
-        public void Bind()
-        {
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ID);
-        }
+        public void Bind() => glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ID);
 
-        public void Unbind()
-        {
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-        }
+        public static void Unbind() => glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-        public void Delete()
-        {
-            glDeleteBuffer(ID);
-        }
+        public void Delete() => glDeleteBuffer(ID);
     }
 }

@@ -11,29 +11,20 @@ namespace PhysicsEngine.Shaders
             ID = glGenVertexArray();
         }
 
-        public unsafe void LinkAttrib(VBO vbo, uint layout, int numComponents, int type, int stride, void* offset)
+        public static unsafe void LinkAttrib(VBO vbo, uint layout, int numComponents, int type, int stride, void* offset)
         {
             vbo.Bind();
 
             glVertexAttribPointer(layout, numComponents, type, false, stride, offset);
             glEnableVertexAttribArray(layout);
 
-            vbo.Unbind();
+            VBO.Unbind();
         }
 
-        public void Bind()
-        {
-            glBindVertexArray(ID);
-        }
+        public void Bind() => glBindVertexArray(ID);
 
-        public void Unbind()
-        {
-            glBindVertexArray(0);
-        }
+        public static void Unbind() => glBindVertexArray(0);
 
-        public void Delete()
-        {
-            glDeleteVertexArray(ID);
-        }
+        public void Delete() => glDeleteVertexArray(ID);
     }
 }

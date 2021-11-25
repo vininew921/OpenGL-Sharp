@@ -42,7 +42,7 @@ namespace PhysicsEngine.Meshes
                     VAO.LinkAttrib(VBO, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
                     break;
             }
-            
+
             VAO.Unbind();
             VBO.Unbind();
             EBO.Unbind();
@@ -56,12 +56,12 @@ namespace PhysicsEngine.Meshes
             uint numDiffuse = 0;
             uint numSpecular = 0;
 
-            for(int i = 0; i < Textures.Length; i++)
+            for (int i = 0; i < Textures.Length; i++)
             {
                 string num;
                 string type = Textures[i].Type;
 
-                if(type == "diffuse")
+                if (type == "diffuse")
                 {
                     num = numDiffuse.ToString();
                     numDiffuse++;

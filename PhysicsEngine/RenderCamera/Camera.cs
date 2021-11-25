@@ -35,10 +35,7 @@ namespace PhysicsEngine.RenderCamera
             CameraMatrix = projection * view;
         }
 
-        public void Matrix(Shader shader, string uniform)
-        {
-            glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, false, (CameraMatrix).to_array());
-        }
+        public void Matrix(Shader shader, string uniform) => glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, false, (CameraMatrix).to_array());
 
         public void Inputs(Window window)
         {

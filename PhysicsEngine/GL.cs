@@ -54,10 +54,7 @@ namespace OpenGL
         ///     <para>GL_FRONT, GL_BACK, and GL_FRONT_AND_BACK are accepted. The initial value is GL_BACK.</para>
         /// </param>
         /// <remarks>If mode is GL_FRONT_AND_BACK, no facets are drawn, but other primitives such as points and lines are drawn.</remarks>
-        public static void glCullFace(int mode)
-        {
-            _glCullFace(mode);
-        }
+        public static void glCullFace(int mode) => _glCullFace(mode);
 
         /// <summary>
         ///     Define front- and back-facing polygons.
@@ -66,10 +63,7 @@ namespace OpenGL
         ///     Specifies the orientation of front-facing polygons.
         ///     <para>GL_CW and GL_CCW are accepted. The initial value is GL_CCW.</para>
         /// </param>
-        public static void glFrontFace(int mode)
-        {
-            _glFrontFace(mode);
-        }
+        public static void glFrontFace(int mode) => _glFrontFace(mode);
 
         /// <summary>
         ///     Specify implementation-specific hints.
@@ -82,28 +76,19 @@ namespace OpenGL
         ///     </para>
         /// </param>
         /// <param name="mode">Specifies a symbolic constant indicating the desired behavior.</param>
-        public static void glHint(int target, int mode)
-        {
-            _glHint(target, mode);
-        }
+        public static void glHint(int target, int mode) => _glHint(target, mode);
 
         /// <summary>
         ///     Specify the width of rasterized lines.
         /// </summary>
         /// <param name="width">Specifies the width of rasterized lines.<para>The initial value is <c>1.0f</c></para>.</param>
-        public static void glLineWidth(float width)
-        {
-            _glLineWidth(width);
-        }
+        public static void glLineWidth(float width) => _glLineWidth(width);
 
         /// <summary>
         ///     Specify the diameter of rasterized points.
         /// </summary>
         /// <param name="size">Specifies the diameter of rasterized points.<para>The initial value is <c>1.0f</c>.</para></param>
-        public static void glPointSize(float size)
-        {
-            _glPointSize(size);
-        }
+        public static void glPointSize(float size) => _glPointSize(size);
 
         /// <summary>
         ///     Select a polygon rasterization mode
@@ -117,10 +102,7 @@ namespace OpenGL
         ///     <para>Accepted values are GL_POINT, GL_LINE, and GL_FILL.</para>
         ///     The initial value is GL_FILL for both front- and back-facing polygons.
         /// </param>
-        public static void glPolygonMode(int face, int mode)
-        {
-            _glPolygonMode(face, mode);
-        }
+        public static void glPolygonMode(int face, int mode) => _glPolygonMode(face, mode);
 
         /// <summary>
         ///     Define the scissor box.
@@ -136,10 +118,7 @@ namespace OpenGL
         /// <param name="width">Specify the width of the scissor box.</param>
         /// <param name="height">Specify the height of the scissor box.</param>
         /// <remarks>When a GL context is first attached to a window, width and height are set to the dimensions of that window.</remarks>
-        public static void glScissor(int x, int y, int width, int height)
-        {
-            _glScissor(x, y, width, height);
-        }
+        public static void glScissor(int x, int y, int width, int height) => _glScissor(x, y, width, height);
 
         /// <summary>
         ///     Specify clear values for the color buffers.
@@ -149,10 +128,7 @@ namespace OpenGL
         /// <param name="blue">The blue component value, a value between <c>0.0f</c> and <c>1.0f</c>.</param>
         /// <param name="alpha">The alpha component value, a value between <c>0.0f</c> and <c>1.0f</c>.</param>
         /// <remarks>Initial values are (0, 0, 0, 0)</remarks>
-        public static void glClearColor(float red, float green, float blue, float alpha)
-        {
-            _glClearColor(red, green, blue, alpha);
-        }
+        public static void glClearColor(float red, float green, float blue, float alpha) => _glClearColor(red, green, blue, alpha);
 
         /// <summary>
         ///     Clear buffers to preset values.
@@ -162,10 +138,7 @@ namespace OpenGL
         ///     Bitwise OR of masks that indicate the buffers to be cleared.
         ///     <para>The three masks are GL_COLOR_BUFFER_BIT, GL_DEPTH_BUFFER_BIT,, and GL_STENCIL_BUFFER_BIT.</para>
         /// </param>
-        public static void glClear(uint mask)
-        {
-            _glClear(mask);
-        }
+        public static void glClear(uint mask) => _glClear(mask);
 
         /// <summary>
         ///     Block until all GL execution is complete.
@@ -174,36 +147,24 @@ namespace OpenGL
         ///         changes to GL state, all changes to connection state, and all changes to the frame buffer contents.
         ///     </para>
         /// </summary>
-        public static void glFinish()
-        {
-            _glFinish();
-        }
+        public static void glFinish() => _glFinish();
 
         /// <summary>
         ///     Force execution of GL commands in finite time.
         /// </summary>
-        public static void glFlush()
-        {
-            _glFlush();
-        }
+        public static void glFlush() => _glFlush();
 
         /// <summary>
         ///     Enable server-side GL capabilities.
         /// </summary>
         /// <param name="cap">Specifies a symbolic constant indicating a GL capability.</param>
-        public static void glEnable(int cap)
-        {
-            _glEnable(cap);
-        }
+        public static void glEnable(int cap) => _glEnable(cap);
 
         /// <summary>
         ///     Disable server-side GL capabilities.
         /// </summary>
         /// <param name="cap">Specifies a symbolic constant indicating a GL capability.</param>
-        public static void glDisable(int cap)
-        {
-            _glDisable(cap);
-        }
+        public static void glDisable(int cap) => _glDisable(cap);
 
         /// <summary>
         ///     Specify the clear value for the stencil buffer.
@@ -212,10 +173,7 @@ namespace OpenGL
         ///     Specifies the index used when the stencil buffer is cleared.
         ///     <para>The initial value is 0.</para>
         /// </param>
-        public static void glClearStencil(int index)
-        {
-            _glClearStencil(index);
-        }
+        public static void glClearStencil(int index) => _glClearStencil(index);
 
         /// <summary>
         ///     Specify the clear value for the depth buffer.
@@ -224,10 +182,7 @@ namespace OpenGL
         ///     Specifies the depth value used when the depth buffer is cleared.
         ///     <para>he initial value is <c>1.0</c>.</para>
         /// </param>
-        public static void glClearDepth(double depth)
-        {
-            _glClearDepth(depth);
-        }
+        public static void glClearDepth(double depth) => _glClearDepth(depth);
 
         /// <summary>
         ///     Control the front and back writing of individual bits in the stencil planes.
@@ -237,10 +192,7 @@ namespace OpenGL
         ///     <para>Initially, the mask is all 1's</para>
         ///     .
         /// </param>
-        public static void glStencilMask(uint mask)
-        {
-            _glStencilMask(mask);
-        }
+        public static void glStencilMask(uint mask) => _glStencilMask(mask);
 
         /// <summary>
         ///     Enable and disable writing of frame buffer color components
@@ -249,10 +201,7 @@ namespace OpenGL
         /// <param name="green">Specify whether green will be written into the frame buffer.</param>
         /// <param name="blue">Specify whether blue will be written into the frame buffer.</param>
         /// <param name="alpha">Specify whether alpha will be written into the frame buffer.</param>
-        public static void glColorMask(bool red, bool green, bool blue, bool alpha)
-        {
-            _glColorMask(red, green, blue, alpha);
-        }
+        public static void glColorMask(bool red, bool green, bool blue, bool alpha) => _glColorMask(red, green, blue, alpha);
 
         /// <summary>
         ///     Enable and disable writing of frame buffer color components
@@ -262,19 +211,13 @@ namespace OpenGL
         /// <param name="green">Specify whether green will be written into the frame buffer.</param>
         /// <param name="blue">Specify whether blue will be written into the frame buffer.</param>
         /// <param name="alpha">Specify whether alpha will be written into the frame buffer.</param>
-        public static void glColorMaski(uint index, bool red, bool green, bool blue, bool alpha)
-        {
-            _glColorMaski(index, red, green, blue, alpha);
-        }
+        public static void glColorMaski(uint index, bool red, bool green, bool blue, bool alpha) => _glColorMaski(index, red, green, blue, alpha);
 
         /// <summary>
         ///     Enable or disable writing into the depth buffer.
         /// </summary>
         /// <param name="enabled">Specifies whether the depth buffer is enabled for writing.</param>
-        public static void glDepthMask(bool enabled)
-        {
-            _glDepthMask(enabled);
-        }
+        public static void glDepthMask(bool enabled) => _glDepthMask(enabled);
 
         /// <summary>
         ///     Set the blend color.
@@ -283,10 +226,7 @@ namespace OpenGL
         /// <param name="green">Specify the green component of the color to blend.</param>
         /// <param name="blue">Specify the blue component of the color to blend.</param>
         /// <param name="alpha">Specify the alpha component of the color to blend.</param>
-        public static void glBlendColor(float red, float green, float blue, float alpha)
-        {
-            _glBlendColor(red, green, blue, alpha);
-        }
+        public static void glBlendColor(float red, float green, float blue, float alpha) => _glBlendColor(red, green, blue, alpha);
 
         /// <summary>
         ///     Specify pixel arithmetic.
@@ -299,19 +239,13 @@ namespace OpenGL
         ///     Specifies how the red, green, blue, and alpha destination blending factors are computed.
         ///     <para>The initial value is GL_ZERO.</para>
         /// </param>
-        public static void glBlendFunc(int srcFactor, int dstFactor)
-        {
-            _glBlendFunc(srcFactor, dstFactor);
-        }
+        public static void glBlendFunc(int srcFactor, int dstFactor) => _glBlendFunc(srcFactor, dstFactor);
 
         /// <summary>
         ///     Specify the equation used for both the RGB blend equation and the Alpha blend equation.
         /// </summary>
         /// <param name="mode">Specifies how source and destination colors are combined.</param>
-        public static void glBlendEquation(int mode)
-        {
-            _glBlendEquation(mode);
-        }
+        public static void glBlendEquation(int mode) => _glBlendEquation(mode);
 
         /// <summary>
         ///     Set the viewport.
@@ -320,20 +254,14 @@ namespace OpenGL
         /// <param name="y">The lower left corner of the viewport rectangle on the y-axis, in pixels.</param>
         /// <param name="width">The width of the viewport, in pixels.</param>
         /// <param name="height">The height of the viewport.</param>
-        public static void glViewport(int x, int y, int width, int height)
-        {
-            _glViewport(x, y, width, height);
-        }
+        public static void glViewport(int x, int y, int width, int height) => _glViewport(x, y, width, height);
 
         /// <summary>
         ///     Test whether a capability is enabled.
         /// </summary>
         /// <param name="cap">Specifies a symbolic constant indicating a GL capability.</param>
         /// <returns><c>true</c> if capability is enabled, otherwise <c>false</c>.</returns>
-        public static bool glIsEnabled(int cap)
-        {
-            return _glIsEnabled(cap);
-        }
+        public static bool glIsEnabled(int cap) => _glIsEnabled(cap);
 
         /// <summary>
         ///     Render primitives from array data.
@@ -341,37 +269,25 @@ namespace OpenGL
         /// <param name="mode">Specifies what kind of primitives to render.</param>
         /// <param name="first">Specifies the starting index in the enabled arrays.</param>
         /// <param name="count">Specifies the number of indices to be rendered.</param>
-        public static void glDrawArrays(int mode, int first, int count)
-        {
-            _glDrawArrays(mode, first, count);
-        }
+        public static void glDrawArrays(int mode, int first, int count) => _glDrawArrays(mode, first, count);
 
         /// <summary>
         ///     Specify which color buffers are to be drawn into.
         /// </summary>
         /// <param name="buffer">Specifies the color buffer to be drawn into.</param>
-        public static void glDrawBuffer(int buffer)
-        {
-            _glDrawBuffer(buffer);
-        }
+        public static void glDrawBuffer(int buffer) => _glDrawBuffer(buffer);
 
         /// <summary>
         ///     Select a color buffer source for pixels.
         /// </summary>
         /// <param name="buffer">Specifies a color buffer.</param>
-        public static void glReadBuffer(int buffer)
-        {
-            _glReadBuffer(buffer);
-        }
+        public static void glReadBuffer(int buffer) => _glReadBuffer(buffer);
 
         /// <summary>
         ///     Specify a logical pixel operation for rendering.
         /// </summary>
         /// <param name="opcode"></param>
-        public static void glLogicOp(int opcode)
-        {
-            _glLogicOp(opcode);
-        }
+        public static void glLogicOp(int opcode) => _glLogicOp(opcode);
 
         /// <summary>
         ///     Set front and back function and reference value for stencil testing.
@@ -383,10 +299,7 @@ namespace OpenGL
         ///     test is done.
         ///     <para>The initial value is all 1's.</para>
         /// </param>
-        public static void glStencilFunc(int func, int reference, uint mask)
-        {
-            _glStencilFunc(func, reference, mask);
-        }
+        public static void glStencilFunc(int func, int reference, uint mask) => _glStencilFunc(func, reference, mask);
 
         /// <summary>
         ///     Set front and back stencil test actions.
@@ -397,19 +310,13 @@ namespace OpenGL
         ///     Specifies the stencil action when both the stencil test and the depth test pass, or when the
         ///     stencil test passes and either there is no depth buffer or depth testing is not enabled
         /// </param>
-        public static void glStencilOp(int fail, int zfail, int zpass)
-        {
-            _glStencilOp(fail, zfail, zpass);
-        }
+        public static void glStencilOp(int fail, int zfail, int zpass) => _glStencilOp(fail, zfail, zpass);
 
         /// <summary>
         ///     Specify the value used for depth buffer comparisons.
         /// </summary>
         /// <param name="func">Specifies the depth comparison function.</param>
-        public static void glDepthFunc(int func)
-        {
-            _glDepthFunc(func);
-        }
+        public static void glDepthFunc(int func) => _glDepthFunc(func);
 
         /// <summary>
         ///     Start conditional rendering.
@@ -419,27 +326,18 @@ namespace OpenGL
         ///     commands are discarded.
         /// </param>
         /// <param name="mode">Specifies how the results of the occlusion query is interpreted.</param>
-        public static void glBeginConditionalRender(uint id, int mode)
-        {
-            _glBeginConditionalRender(id, mode);
-        }
+        public static void glBeginConditionalRender(uint id, int mode) => _glBeginConditionalRender(id, mode);
 
         /// <summary>
         ///     Ends conditional rendering.
         /// </summary>
-        public static void glEndConditionalRender()
-        {
-            _glEndConditionalRender();
-        }
+        public static void glEndConditionalRender() => _glEndConditionalRender();
 
         /// <summary>
         ///     Specify whether data read via ReadPixels should be clamped.
         /// </summary>
         /// <param name="clamp">Specifies whether to apply color clamping.</param>
-        public static void glClampColor(bool clamp)
-        {
-            _glClampColor(GL_CLAMP_READ_COLOR, clamp ? GL_TRUE : GL_FALSE);
-        }
+        public static void glClampColor(bool clamp) => _glClampColor(GL_CLAMP_READ_COLOR, clamp ? GL_TRUE : GL_FALSE);
 
         /// <summary>
         ///     Return a string describing the current GL connection.
@@ -481,20 +379,14 @@ namespace OpenGL
         ///     into memory: GL_PACK_ALIGNMENT. The other affects the unpacking of pixel data from memory: GL_UNPACK_ALIGNMENT.
         /// </param>
         /// <param name="param">Specifies the value that <paramref name="paramName" /> is set to. Valid values are 1, 2, 4, or 8.</param>
-        public static void glPixelStorei(int paramName, int param)
-        {
-            _glPixelStorei(paramName, param);
-        }
+        public static void glPixelStorei(int paramName, int param) => _glPixelStorei(paramName, param);
 
         /// <summary>
         ///     Set pixel storage modes.
         /// </summary>
         /// <param name="paramName">Specifies the symbolic name of the parameter to be set.</param>
         /// <param name="param">Specifies the value that <paramref name="paramName" /> is set to.</param>
-        public static void glPixelStoref(int paramName, float param)
-        {
-            _glPixelStoref(paramName, param);
-        }
+        public static void glPixelStoref(int paramName, float param) => _glPixelStoref(paramName, param);
 
         /// <summary>
         ///     Creates and initializes a buffer object's data store.
@@ -513,10 +405,7 @@ namespace OpenGL
         ///     </para>
         ///     .
         /// </param>
-        public static void glBufferData(int target, int size, IntPtr data, int usage)
-        {
-            _glBufferData(target, new IntPtr(size), data.ToPointer(), usage);
-        }
+        public static void glBufferData(int target, int size, IntPtr data, int usage) => _glBufferData(target, new IntPtr(size), data.ToPointer(), usage);
 
         /// <summary>
         ///     Creates and initializes a buffer object's data store.
@@ -535,19 +424,13 @@ namespace OpenGL
         ///     </para>
         ///     .
         /// </param>
-        public static void glBufferData(int target, int size, /*const*/ void* data, int usage)
-        {
-            _glBufferData(target, new IntPtr(size), data, usage);
-        }
+        public static void glBufferData(int target, int size, /*const*/ void* data, int usage) => _glBufferData(target, new IntPtr(size), data, usage);
 
         /// <summary>
         ///     Gets the stored error code information.
         /// </summary>
         /// <returns>An OpenGL error code.</returns>
-        public static int GetError()
-        {
-            return _glGetError();
-        }
+        public static int GetError() => _glGetError();
 
         /// <summary>
         ///     Set texture parameters.
@@ -561,10 +444,7 @@ namespace OpenGL
         ///     one of the following: GL_TEXTURE_MIN_FILTER, GL_TEXTURE_MAG_FILTER, GL_TEXTURE_WRAP_S, or GL_TEXTURE_WRAP_T.
         /// </param>
         /// <param name="param">Specifies the value of <paramref name="paramName" />.</param>
-        public static void glTexParameterf(int target, int paramName, float param)
-        {
-            _glTexParameterf(target, paramName, param);
-        }
+        public static void glTexParameterf(int target, int paramName, float param) => _glTexParameterf(target, paramName, param);
 
         /// <summary>
         ///     Set texture parameters.
@@ -578,10 +458,7 @@ namespace OpenGL
         ///     one of the following: GL_TEXTURE_MIN_FILTER, GL_TEXTURE_MAG_FILTER, GL_TEXTURE_WRAP_S, or GL_TEXTURE_WRAP_T.
         /// </param>
         /// <param name="param">Specifies the value of <paramref name="paramName" />.</param>
-        public static void glTexParameteri(int target, int paramName, int param)
-        {
-            _glTexParameteri(target, paramName, param);
-        }
+        public static void glTexParameteri(int target, int paramName, int param) => _glTexParameteri(target, paramName, param);
 
         /// <summary>
         ///     Set texture parameters.
@@ -595,10 +472,7 @@ namespace OpenGL
         ///     one of the following: GL_TEXTURE_MIN_FILTER, GL_TEXTURE_MAG_FILTER, GL_TEXTURE_WRAP_S, or GL_TEXTURE_WRAP_T.
         /// </param>
         /// <param name="param">Specifies the value of <paramref name="paramName" />.</param>
-        public static void glTexParameterfv(int target, int paramName, float* param)
-        {
-            _glTexParameterfv(target, paramName, param);
-        }
+        public static void glTexParameterfv(int target, int paramName, float* param) => _glTexParameterfv(target, paramName, param);
 
         /// <summary>
         ///     Set texture parameters.
@@ -612,10 +486,7 @@ namespace OpenGL
         ///     one of the following: GL_TEXTURE_MIN_FILTER, GL_TEXTURE_MAG_FILTER, GL_TEXTURE_WRAP_S, or GL_TEXTURE_WRAP_T.
         /// </param>
         /// <param name="param">Specifies the value of <paramref name="paramName" />.</param>
-        public static void glTexParameteriv(int target, int paramName, int* param)
-        {
-            _glTexParameteriv(target, paramName, param);
-        }
+        public static void glTexParameteriv(int target, int paramName, int* param) => _glTexParameteriv(target, paramName, param);
 
         /// <summary>
         ///     Set texture parameters.
@@ -667,10 +538,7 @@ namespace OpenGL
         /// <param name="far">
         ///     Specifies the mapping of the far clipping plane to window coordinates.<c>The initial value is 1.</c>
         /// </param>
-        public static void glDepthRange(double near, double far)
-        {
-            _glDepthRange(near, far);
-        }
+        public static void glDepthRange(double near, double far) => _glDepthRange(near, far);
 
         /// <summary>
         ///     Render primitives from array data.
@@ -682,10 +550,7 @@ namespace OpenGL
         ///     <para>Must be one of GL_UNSIGNED_BYTE, GL_UNSIGNED_SHORT, or GL_UNSIGNED_INT.</para>
         /// </param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
-        public static void glDrawElements(int mode, int count, int type, /*const*/ void* indices)
-        {
-            _glDrawElements(mode, count, type, indices);
-        }
+        public static void glDrawElements(int mode, int count, int type, /*const*/ void* indices) => _glDrawElements(mode, count, type, indices);
 
         /// <summary>
         ///     Render primitives from array data.
@@ -734,10 +599,7 @@ namespace OpenGL
         /// <param name="format">Specifies a pixel format for the returned data. </param>
         /// <param name="type">Specifies a pixel type for the returned data.</param>
         /// <param name="pixels">Returns the texture image. Should be a pointer to an array of the type specified by type.</param>
-        public static void glGetTexImage(int target, int level, int format, int type, void* pixels)
-        {
-            _glGetTexImage(target, level, format, type, pixels);
-        }
+        public static void glGetTexImage(int target, int level, int format, int type, void* pixels) => _glGetTexImage(target, level, format, type, pixels);
 
         /// <summary>
         ///     Return a texture image.
@@ -747,10 +609,7 @@ namespace OpenGL
         /// <param name="format">Specifies a pixel format for the returned data. </param>
         /// <param name="type">Specifies a pixel type for the returned data.</param>
         /// <param name="pixels">Returns the texture image. Should be a pointer to an array of the type specified by type.</param>
-        public static void glGetTexImage(int target, int level, int format, int type, IntPtr pixels)
-        {
-            _glGetTexImage(target, level, format, type, pixels.ToPointer());
-        }
+        public static void glGetTexImage(int target, int level, int format, int type, IntPtr pixels) => _glGetTexImage(target, level, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Read a block of pixels from the frame buffer.
@@ -762,10 +621,7 @@ namespace OpenGL
         /// <param name="format">Specifies the format of the pixel data.<para>The following symbolic values are accepted: GL_STENCIL_INDEX, GL_DEPTH_COMPONENT, GL_DEPTH_STENCIL, GL_RED, GL_GREEN, GL_BLUE, GL_RGB, GL_BGR, GL_RGBA, and GL_BGRA.</para></param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">A pointer where the pixel data will be written.<para>Must have enough memory allocated for the desired dimensions and pixel format.</para></param>
-        public static void glReadPixels(int x, int y, int width, int height, int format, int type, void* pixels)
-        {
-            _glReadPixels(x, y, width, height, format, type, pixels);
-        }
+        public static void glReadPixels(int x, int y, int width, int height, int format, int type, void* pixels) => _glReadPixels(x, y, width, height, format, type, pixels);
 
         /// <summary>
         ///     Read a block of pixels from the frame buffer.
@@ -777,10 +633,7 @@ namespace OpenGL
         /// <param name="format">Specifies the format of the pixel data.</param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">A pointer where the pixel data will be written.<para>Must have enough memory allocated for the desired dimensions and pixel format.</para></param>
-        public static void glReadPixels(int x, int y, int width, int height, int format, int type, IntPtr pixels)
-        {
-            _glReadPixels(x, y, width, height, format, type, pixels.ToPointer());
-        }
+        public static void glReadPixels(int x, int y, int width, int height, int format, int type, IntPtr pixels) => _glReadPixels(x, y, width, height, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Read a block of pixels from the frame buffer.
@@ -805,10 +658,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="n">Specifies the number of buffers.</param>
         /// <param name="buffers">Points to an array of symbolic constants specifying the buffers into which fragment colors or data values will be written.</param>
-        public static void glDrawBuffers(int n, /*const*/ int* buffers)
-        {
-            _glDrawBuffers(n, buffers);
-        }
+        public static void glDrawBuffers(int n, /*const*/ int* buffers) => _glDrawBuffers(n, buffers);
 
         /// <summary>
         ///     Specifies a list of color buffers to be drawn into.
@@ -843,10 +693,7 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage1D(int target, int level, int internalFormat, int width, int border, int format, int type, IntPtr pixels)
-        {
-            _glTexImage1D(target, level, internalFormat, width, border, format, type, pixels.ToPointer());
-        }
+        public static void glTexImage1D(int target, int level, int internalFormat, int width, int border, int format, int type, IntPtr pixels) => _glTexImage1D(target, level, internalFormat, width, border, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Specify a one-dimensional texture image.
@@ -869,10 +716,7 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage1D(int target, int level, int internalFormat, int width, int border, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexImage1D(target, level, internalFormat, width, border, format, type, pixels);
-        }
+        public static void glTexImage1D(int target, int level, int internalFormat, int width, int border, int format, int type, /*const*/ void* pixels) => _glTexImage1D(target, level, internalFormat, width, border, format, type, pixels);
 
         /// <summary>
         ///     Specify a two-dimensional texture image.
@@ -902,10 +746,7 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, IntPtr pixels)
-        {
-            _glTexImage2D(target, level, internalFormat, width, height, border, format, type, pixels.ToPointer());
-        }
+        public static void glTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, IntPtr pixels) => _glTexImage2D(target, level, internalFormat, width, height, border, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Specify a two-dimensional texture image.
@@ -935,10 +776,7 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexImage2D(target, level, internalFormat, width, height, border, format, type, pixels);
-        }
+        public static void glTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int format, int type, /*const*/ void* pixels) => _glTexImage2D(target, level, internalFormat, width, height, border, format, type, pixels);
 
         /// <summary>
         ///     Specify a three-dimensional texture image.
@@ -969,10 +807,7 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int format, int type, IntPtr pixels)
-        {
-            _glTexImage3D(target, level, internalFormat, width, height, depth, border, format, type, pixels.ToPointer());
-        }
+        public static void glTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int format, int type, IntPtr pixels) => _glTexImage3D(target, level, internalFormat, width, height, depth, border, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Specify a three-dimensional texture image.
@@ -1003,39 +838,27 @@ namespace OpenGL
         ///     Specifies the data type of the pixel data.
         /// </param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexImage3D(target, level, internalFormat, width, height, depth, border, format, type, pixels);
-        }
+        public static void glTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int format, int type, /*const*/ void* pixels) => _glTexImage3D(target, level, internalFormat, width, height, depth, border, format, type, pixels);
 
         /// <summary>
         ///     Bind a named texture to a texturing target.
         /// </summary>
         /// <param name="target">Specifies the target to which the texture is bound.</param>
         /// <param name="texture">Specifies the name of a texture.</param>
-        public static void glBindTexture(int target, uint texture)
-        {
-            _glBindTexture(target, texture);
-        }
+        public static void glBindTexture(int target, uint texture) => _glBindTexture(target, texture);
 
         /// <summary>
         ///     Select active texture unit.
         /// </summary>
         /// <param name="texture">Specifies which texture unit to make active.</param>
-        public static void glActiveTexture(int texture)
-        {
-            _glActiveTexture(texture);
-        }
+        public static void glActiveTexture(int texture) => _glActiveTexture(texture);
 
         /// <summary>
         ///     Delete named textures.
         /// </summary>
         /// <param name="n">Specifies the number of textures to be deleted.</param>
         /// <param name="textures">Specifies an array of textures to be deleted.</param>
-        public static void glDeleteTextures(int n, /*const*/ uint* textures)
-        {
-            _glDeleteTextures(n, textures);
-        }
+        public static void glDeleteTextures(int n, /*const*/ uint* textures) => _glDeleteTextures(n, textures);
 
         /// <summary>
         ///     Delete named textures.
@@ -1058,30 +881,21 @@ namespace OpenGL
         ///     Deletes a single texture object.
         /// </summary>
         /// <param name="texture">A texture to delete.</param>
-        public static void glDeleteTexture(uint texture)
-        {
-            _glDeleteTextures(1, &texture);
-        }
+        public static void glDeleteTexture(uint texture) => _glDeleteTextures(1, &texture);
 
         /// <summary>
         ///     Determine if a name corresponds to a texture
         /// </summary>
         /// <param name="texture">Specifies a value that may be the name of a texture.</param>
         /// <returns><c>true</c> if object is a texture, otherwise false.</returns>
-        public static bool glIsTexture(uint texture)
-        {
-            return _glIsTexture(texture);
-        }
+        public static bool glIsTexture(uint texture) => _glIsTexture(texture);
 
         /// <summary>
         ///     Generate texture names.
         /// </summary>
         /// <param name="n">Specifies the number of texture names to be generated.</param>
         /// <param name="textures">Specifies an array in which the generated texture names are stored.</param>
-        public static void glGenTextures(int n, uint* textures)
-        {
-            _glGenTextures(n, textures);
-        }
+        public static void glGenTextures(int n, uint* textures) => _glGenTextures(n, textures);
 
         /// <summary>
         ///     Generate texture names.
@@ -1130,10 +944,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="n">Specifies the number of query object names to be generated.</param>
         /// <param name="ids">Specifies an array in which the generated query object names are stored.</param>
-        public static void glGenQueries(int n, uint* ids)
-        {
-            _glGenQueries(n, ids);
-        }
+        public static void glGenQueries(int n, uint* ids) => _glGenQueries(n, ids);
 
         /// <summary>
         ///     Generate query object names.
@@ -1164,19 +975,13 @@ namespace OpenGL
         ///     Is multiplied by an implementation-specific value to create a constant depth offset.
         ///     <para>The initial value is 0.</para>
         /// </param>
-        public static void glPolygonOffset(float factor, float units)
-        {
-            _glPolygonOffset(factor, units);
-        }
+        public static void glPolygonOffset(float factor, float units) => _glPolygonOffset(factor, units);
 
         /// <summary>
         /// Specify the vertex to be used as the source of data for flat shaded varyings.
         /// </summary>
         /// <param name="mode">Specifies the vertex to be used as the source of data for flat shaded varyings.</param>
-        public static void glProvokingVertex(int mode)
-        {
-            _glProvokingVertex(mode);
-        }
+        public static void glProvokingVertex(int mode) => _glProvokingVertex(mode);
 
         /// <summary>
         ///     Returns a compressed texture image.
@@ -1190,10 +995,7 @@ namespace OpenGL
         ///     A pointer where the pixel data will be written.
         ///     <para>Enough memory must be allocated at this location for the data to written.</para>
         /// </param>
-        public static void glGetCompressedTexImage(int target, int level, IntPtr pixels)
-        {
-            _glGetCompressedTexImage(target, level, pixels.ToPointer());
-        }
+        public static void glGetCompressedTexImage(int target, int level, IntPtr pixels) => _glGetCompressedTexImage(target, level, pixels.ToPointer());
 
         /// <summary>
         ///     Returns a compressed texture image.
@@ -1207,10 +1009,7 @@ namespace OpenGL
         ///     A pointer where the pixel data will be written.
         ///     <para>Enough memory must be allocated at this location for the data to written.</para>
         /// </param>
-        public static void glGetCompressedTexImage(int target, int level, void* pixels)
-        {
-            _glGetCompressedTexImage(target, level, pixels);
-        }
+        public static void glGetCompressedTexImage(int target, int level, void* pixels) => _glGetCompressedTexImage(target, level, pixels);
 
         /// <summary>
         ///     Specify multisample coverage parameters.
@@ -1223,10 +1022,7 @@ namespace OpenGL
         ///     Specify a single boolean value representing if the coverage masks should be inverted.
         ///     <para>The initial value is <c>false</c>.</para>
         /// </param>
-        public static void glSampleCoverage(float value, bool invert)
-        {
-            _glSampleCoverage(value, invert);
-        }
+        public static void glSampleCoverage(float value, bool invert) => _glSampleCoverage(value, invert);
 
         /// <summary>
         ///     Delimit the boundaries of a query object.
@@ -1240,10 +1036,7 @@ namespace OpenGL
         ///     </para>
         /// </param>
         /// <param name="id">Specifies the name of a query object.</param>
-        public static void glBeginQuery(int target, uint id)
-        {
-            _glBeginQuery(target, id);
-        }
+        public static void glBeginQuery(int target, uint id) => _glBeginQuery(target, id);
 
         /// <summary>
         ///     Delimit the boundaries of a query object.
@@ -1255,30 +1048,21 @@ namespace OpenGL
         ///         GL_PRIMITIVES_GENERATED, GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, or GL_TIME_ELAPSED.
         ///     </para>
         /// </param>
-        public static void glEndQuery(int target)
-        {
-            _glEndQuery(target);
-        }
+        public static void glEndQuery(int target) => _glEndQuery(target);
 
         /// <summary>
         ///     Determine if a name corresponds to a query object.
         /// </summary>
         /// <param name="id">Specifies a value that may be the name of a query object.</param>
         /// <returns><c>true</c> if object is a query object object, otherwise <c>false</c>.</returns>
-        public static bool glIsQuery(uint id)
-        {
-            return _glIsQuery(id);
-        }
+        public static bool glIsQuery(uint id) => _glIsQuery(id);
 
         /// <summary>
         ///     Delete named query objects.
         /// </summary>
         /// <param name="n">Specifies the number of query objects to be deleted.</param>
         /// <param name="ids">Specifies an array of query objects to be deleted.</param>
-        public static void glDeleteQueries(int n, /*const*/ uint* ids)
-        {
-            _glDeleteQueries(n, ids);
-        }
+        public static void glDeleteQueries(int n, /*const*/ uint* ids) => _glDeleteQueries(n, ids);
 
         /// <summary>
         ///     Delete named query objects.
@@ -1296,10 +1080,7 @@ namespace OpenGL
         ///     Deletes a single query object.
         /// </summary>
         /// <param name="id">The query to delete.</param>
-        public static void glDeleteQuery(uint id)
-        {
-            _glDeleteQueries(1, &id);
-        }
+        public static void glDeleteQuery(uint id) => _glDeleteQueries(1, &id);
 
         /// <summary>
         ///     Set the RGB blend equation and the alpha blend equation separately.
@@ -1314,10 +1095,7 @@ namespace OpenGL
         ///     colors are combined.
         ///     <para>Must be GL_FUNC_ADD, GL_FUNC_SUBTRACT, GL_FUNC_REVERSE_SUBTRACT, GL_MIN, GL_MAX.</para>
         /// </param>
-        public static void glBlendEquationSeparate(int modeRGB, int modeAlpha)
-        {
-            _glBlendEquationSeparate(modeRGB, modeAlpha);
-        }
+        public static void glBlendEquationSeparate(int modeRGB, int modeAlpha) => _glBlendEquationSeparate(modeRGB, modeAlpha);
 
         /// <summary>
         ///     Set front and/or back function and reference value for stencil testing
@@ -1346,10 +1124,7 @@ namespace OpenGL
         ///     test is done.
         ///     <para>The initial value is all 1's.</para>
         /// </param>
-        public static void glStencilFuncSeparate(int face, int func, int reference, uint mask)
-        {
-            _glStencilFuncSeparate(face, func, reference, mask);
-        }
+        public static void glStencilFuncSeparate(int face, int func, int reference, uint mask) => _glStencilFuncSeparate(face, func, reference, mask);
 
         /// <summary>
         ///     Set front and/or back stencil test actions.
@@ -1376,10 +1151,7 @@ namespace OpenGL
         ///     symbolic constants as <paramref name="sfail"/>​.
         ///     <para>The initial value is GL_KEEP.</para>
         /// </param>
-        public static void glStencilOpSeparate(int face, int sfail, int dpfail, int dppass)
-        {
-            _glStencilOpSeparate(face, sfail, dpfail, dppass);
-        }
+        public static void glStencilOpSeparate(int face, int sfail, int dpfail, int dppass) => _glStencilOpSeparate(face, sfail, dpfail, dppass);
 
         /// <summary>
         ///     Control the front and/or back writing of individual bits in the stencil planes.
@@ -1392,10 +1164,7 @@ namespace OpenGL
         ///     Specifies a bit mask to enable and disable writing of individual bits in the stencil planes.
         ///     Initially, the mask is all 1's.
         /// </param>
-        public static void glStencilMaskSeparate(int face, uint mask)
-        {
-            _glStencilMaskSeparate(face, mask);
-        }
+        public static void glStencilMaskSeparate(int face, uint mask) => _glStencilMaskSeparate(face, mask);
 
         /// <summary>
         ///     Instruct the GL server to block until the specified sync object becomes signaled.
@@ -1408,10 +1177,7 @@ namespace OpenGL
         ///     Specifies the timeout that the server should wait before continuing.
         ///     <para>Must be GL_TIMEOUT_IGNORED.</para>
         /// </param>
-        public static void glWaitSync(IntPtr sync, uint flags, ulong timeout)
-        {
-            _glWaitSync(sync, flags, timeout);
-        }
+        public static void glWaitSync(IntPtr sync, uint flags, ulong timeout) => _glWaitSync(sync, flags, timeout);
 
         /// <summary>
         ///     Create a new sync object and insert it into the GL command stream.
@@ -1423,29 +1189,20 @@ namespace OpenGL
         ///     <para>No flags are presently defined for this operation and flags must be zero.</para>
         /// </param>
         /// <returns>The sync object reference.</returns>
-        public static IntPtr glFenceSync(int condition, uint flags = 0)
-        {
-            return _glFenceSync(condition, flags);
-        }
+        public static IntPtr glFenceSync(int condition, uint flags = 0) => _glFenceSync(condition, flags);
 
         /// <summary>
         ///     Delete a sync object
         /// </summary>
         /// <param name="sync">The sync object to be deleted.</param>
-        public static void glDeleteSync(IntPtr sync)
-        {
-            _glDeleteSync(sync);
-        }
+        public static void glDeleteSync(IntPtr sync) => _glDeleteSync(sync);
 
         /// <summary>
         ///     Determines if a name corresponds to a sync object.
         /// </summary>
         /// <param name="sync">Specifies a value that may be the name of a sync object.</param>
         /// <returns><c>true</c> if sync is currently the name of a sync object, otherwise <c>false</c>.</returns>
-        public static bool glIsSync(IntPtr sync)
-        {
-            return _glIsSync(sync);
-        }
+        public static bool glIsSync(IntPtr sync) => _glIsSync(sync);
 
         /// <summary>
         ///     Block and wait for a sync object to become signaled.
@@ -1457,20 +1214,14 @@ namespace OpenGL
         ///     become signaled.
         /// </param>
         /// <returns>The status, which will be GL_ALREADY_SIGNALED, GL_TIMEOUT_EXPIRED, GL_CONDITION_SATISFIED, or GL_WAIT_FAILED.</returns>
-        public static int glClientWaitSync(IntPtr sync, uint flags, ulong timeout)
-        {
-            return _glClientWaitSync(sync, flags, timeout);
-        }
+        public static int glClientWaitSync(IntPtr sync, uint flags, ulong timeout) => _glClientWaitSync(sync, flags, timeout);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
         /// </summary>
         /// <param name="paramName">Specifies the parameter value to be returned.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetBooleanv(int paramName, bool* data)
-        {
-            _glGetBooleanv(paramName, data);
-        }
+        public static void glGetBooleanv(int paramName, bool* data) => _glGetBooleanv(paramName, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -1508,10 +1259,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="paramName">Specifies the parameter value to be returned.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetDoublev(int paramName, double* data)
-        {
-            _glGetDoublev(paramName, data);
-        }
+        public static void glGetDoublev(int paramName, double* data) => _glGetDoublev(paramName, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -1550,10 +1298,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="paramName">Specifies the parameter value to be returned.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetFloatv(int paramName, float* data)
-        {
-            _glGetFloatv(paramName, data);
-        }
+        public static void glGetFloatv(int paramName, float* data) => _glGetFloatv(paramName, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -1591,10 +1336,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="paramName">Specifies the parameter value to be returned.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetIntegerv(int paramName, int* data)
-        {
-            _glGetIntegerv(paramName, data);
-        }
+        public static void glGetIntegerv(int paramName, int* data) => _glGetIntegerv(paramName, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -1632,10 +1374,7 @@ namespace OpenGL
         /// </summary>
         /// <param name="paramName">Specifies the parameter value to be returned.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetInteger64v(int paramName, long* data)
-        {
-            _glGetInteger64v(paramName, data);
-        }
+        public static void glGetInteger64v(int paramName, long* data) => _glGetInteger64v(paramName, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -1712,10 +1451,7 @@ namespace OpenGL
         /// <param name="target">Specifies the target to which the texture is bound.</param>
         /// <param name="paramName">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">An pointer to an array where the texture parameters will be stored.</param>
-        public static void glGetTexParameterfv(int target, int paramName, float* args)
-        {
-            _glGetTexParameterfv(target, paramName, args);
-        }
+        public static void glGetTexParameterfv(int target, int paramName, float* args) => _glGetTexParameterfv(target, paramName, args);
 
         /// <summary>
         ///     Return texture parameter values.
@@ -1723,10 +1459,7 @@ namespace OpenGL
         /// <param name="target">Specifies the target to which the texture is bound.</param>
         /// <param name="paramName">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">An pointer to an array where the texture parameters will be stored.</param>
-        public static void glGetTexParameteriv(int target, int paramName, int* args)
-        {
-            _glGetTexParameteriv(target, paramName, args);
-        }
+        public static void glGetTexParameteriv(int target, int paramName, int* args) => _glGetTexParameteriv(target, paramName, args);
 
         /// <summary>
         ///     Return a single texture parameter value.
@@ -1810,10 +1543,7 @@ namespace OpenGL
         /// </param>
         /// <param name="paramName">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">An pointer to an array where the texture parameters will be stored.</param>
-        public static void glGetTexLevelParameterfv(int target, int level, int paramName, float* args)
-        {
-            _glGetTexLevelParameterfv(target, level, paramName, args);
-        }
+        public static void glGetTexLevelParameterfv(int target, int level, int paramName, float* args) => _glGetTexLevelParameterfv(target, level, paramName, args);
 
         /// <summary>
         ///     Return texture parameter values for a specific level of detail.
@@ -1825,10 +1555,7 @@ namespace OpenGL
         /// </param>
         /// <param name="paramName">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">An pointer to an array where the texture parameters will be stored.</param>
-        public static void glGetTexLevelParameteriv(int target, int level, int paramName, int* args)
-        {
-            _glGetTexLevelParameteriv(target, level, paramName, args);
-        }
+        public static void glGetTexLevelParameteriv(int target, int level, int paramName, int* args) => _glGetTexLevelParameteriv(target, level, paramName, args);
 
         /// <summary>
         ///     Return a single texture parameter value for a specific level of detail.
@@ -1874,10 +1601,7 @@ namespace OpenGL
         /// <param name="y">Specify the window coordinates of the left corner of the row of pixels to be copied.</param>
         /// <param name="width">Specifies the width of the texture image. Must be 0 or 2 n + 2 ⁡ border for some integer n. The height of the texture image is 1.</param>
         /// <param name="border">Specifies the width of the border. Must be either 0 or 1.</param>
-        public static void glCopyTexImage1D(int target, int level, int internalFormat, int x, int y, int width, int border)
-        {
-            _glCopyTexImage1D(target, level, internalFormat, x, y, width, border);
-        }
+        public static void glCopyTexImage1D(int target, int level, int internalFormat, int x, int y, int width, int border) => _glCopyTexImage1D(target, level, internalFormat, x, y, width, border);
 
         /// <summary>
         /// Copy pixels into a 2D texture image.
@@ -1890,10 +1614,7 @@ namespace OpenGL
         /// <param name="width">Specifies the width of the texture image. Must be 0 or 2 n + 2 ⁡ border for some integer n.</param>
         /// <param name="height">Specifies the height of the texture image. Must be 0 or 2 n + 2 ⁡ border for some integer n.</param>
         /// <param name="border">Specifies the width of the border. Must be either 0 or 1.</param>
-        public static void glCopyTexImage2D(int target, int level, int internalFormat, int x, int y, int width, int height, int border)
-        {
-            _glCopyTexImage2D(target, level, internalFormat, x, y, width, height, border);
-        }
+        public static void glCopyTexImage2D(int target, int level, int internalFormat, int x, int y, int width, int height, int border) => _glCopyTexImage2D(target, level, internalFormat, x, y, width, height, border);
 
         /// <summary>
         ///     Copy a one-dimensional texture sub-image
@@ -1906,10 +1627,7 @@ namespace OpenGL
         /// <param name="x">Specify the window coordinates of the left corner of the row of pixels to be copied.</param>
         /// <param name="y">Specify the window coordinates of the left corner of the row of pixels to be copied.</param>
         /// <param name="width">Specifies the width of the texture sub-image.</param>
-        public static void glCopyTexSubImage1D(int target, int level, int xOffset, int x, int y, int width)
-        {
-            _glCopyTexSubImage1D(target, level, xOffset, x, y, width);
-        }
+        public static void glCopyTexSubImage1D(int target, int level, int xOffset, int x, int y, int width) => _glCopyTexSubImage1D(target, level, xOffset, x, y, width);
 
         /// <summary>
         ///     Copy a two-dimensional texture sub-image
@@ -1938,10 +1656,7 @@ namespace OpenGL
         /// </param>
         /// <param name="width">Specifies the width of the texture sub-image.</param>
         /// <param name="height">Specifies the height of the texture sub-image.</param>
-        public static void glCopyTexSubImage2D(int target, int level, int xOffset, int yOffset, int x, int y, int width, int height)
-        {
-            _glCopyTexSubImage2D(target, level, xOffset, yOffset, x, y, width, height);
-        }
+        public static void glCopyTexSubImage2D(int target, int level, int xOffset, int yOffset, int x, int y, int width, int height) => _glCopyTexSubImage2D(target, level, xOffset, yOffset, x, y, width, height);
 
         /// <summary>
         ///     Specify a one-dimensional texture sub-image.
@@ -1957,10 +1672,7 @@ namespace OpenGL
         /// </param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexSubImage1D(int target, int level, int xOffset, int width, int format, int type, IntPtr pixels)
-        {
-            _glTexSubImage1D(target, level, xOffset, width, format, type, pixels.ToPointer());
-        }
+        public static void glTexSubImage1D(int target, int level, int xOffset, int width, int format, int type, IntPtr pixels) => _glTexSubImage1D(target, level, xOffset, width, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Specify a two-dimensional texture sub-image.
@@ -1978,10 +1690,7 @@ namespace OpenGL
         /// </param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int type, IntPtr pixels)
-        {
-            _glTexSubImage2D(target, level, xOffset, yOffset, width, height, format, type, pixels.ToPointer());
-        }
+        public static void glTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int type, IntPtr pixels) => _glTexSubImage2D(target, level, xOffset, yOffset, width, height, format, type, pixels.ToPointer());
 
         /// <summary>
         ///     Specify a three-dimensional texture sub-image.
@@ -2024,10 +1733,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexSubImage1D(int target, int level, int xOffset, int width, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexSubImage1D(target, level, xOffset, width, format, type, pixels);
-        }
+        public static void glTexSubImage1D(int target, int level, int xOffset, int width, int format, int type, /*const*/ void* pixels) => _glTexSubImage1D(target, level, xOffset, width, format, type, pixels);
 
         /// <summary>
         ///     Specify a two-dimensional texture sub-image.
@@ -2045,10 +1751,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexSubImage2D(target, level, xOffset, yOffset, width, height, format, type, pixels);
-        }
+        public static void glTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int type, /*const*/ void* pixels) => _glTexSubImage2D(target, level, xOffset, yOffset, width, height, format, type, pixels);
 
         /// <summary>
         ///     Specify a three-dimensional texture sub-image.
@@ -2070,10 +1773,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">Specifies the data type of the pixel data.</param>
         /// <param name="pixels">Specifies a pointer to the image data in memory.</param>
-        public static void glTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int type, /*const*/ void* pixels)
-        {
-            _glTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, type, pixels);
-        }
+        public static void glTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int type, /*const*/ void* pixels) => _glTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, type, pixels);
 
         /// <summary>
         ///     Render primitives from array data.
@@ -2163,10 +1863,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     <para>Must be one of GL_UNSIGNED_BYTE, GL_UNSIGNED_SHORT, or GL_UNSIGNED_INT.</para>
         /// </param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
-        public static void glDrawRangeElements(int mode, uint start, uint end, int count, int type, /*const*/void* indices)
-        {
-            _glDrawRangeElements(mode, start, end, count, type, indices);
-        }
+        public static void glDrawRangeElements(int mode, uint start, uint end, int count, int type, /*const*/void* indices) => _glDrawRangeElements(mode, start, end, count, type, indices);
 
         /// <summary>
         ///     Map all of a buffer object's data store into the client's address space.
@@ -2178,20 +1875,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     <para>The symbolic constant must be GL_READ_ONLY, GL_WRITE_ONLY, or GL_READ_WRITE.</para>
         /// </param>
         /// <returns>A pointer to the beginning of the mapped range.</returns>
-        public static IntPtr glMapBuffer(int target, int access)
-        {
-            return new IntPtr(_glMapBuffer(target, access));
-        }
+        public static IntPtr glMapBuffer(int target, int access) => new IntPtr(_glMapBuffer(target, access));
 
         /// <summary>
         ///     Release the mapping of a buffer object's data store into the client's address space.
         /// </summary>
         /// <param name="target">Specifies the target to which the buffer object is bound.</param>
         /// <returns><c>true</c> unless the data store contents have become corrupt during the time the data store was mapped.</returns>
-        public static bool glUnmapBuffer(int target)
-        {
-            return _glUnmapBuffer(target);
-        }
+        public static bool glUnmapBuffer(int target) => _glUnmapBuffer(target);
 
         /// <summary>
         ///     Copy a three-dimensional texture sub-image.
@@ -2217,10 +1908,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="width">Specifies the width of the texture sub-image.</param>
         /// <param name="height">Specifies the height of the texture sub-image.</param>
-        public static void glCopyTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int x, int y, int width, int height)
-        {
-            _glCopyTexSubImage3D(target, level, xOffset, yOffset, zOffset, x, y, width, height);
-        }
+        public static void glCopyTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int x, int y, int width, int height) => _glCopyTexSubImage3D(target, level, xOffset, yOffset, zOffset, x, y, width, height);
 
         /// <summary>
         /// Specify a three-dimensional texture image in a compressed format.
@@ -2234,10 +1922,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage3D(target, level, internalFormat, width, height, depth, border, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int imageSize, IntPtr data) => _glCompressedTexImage3D(target, level, internalFormat, width, height, depth, border, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a two-dimensional texture image in a compressed format
@@ -2250,10 +1935,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage2D(target, level, internalFormat, width, height, border, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int imageSize, IntPtr data) => _glCompressedTexImage2D(target, level, internalFormat, width, height, border, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a one-dimensional texture image in a compressed format.
@@ -2265,10 +1947,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage1D(int target, int level, int internalFormat, int width, int border, int imageSize, IntPtr data)
-        {
-            _glCompressedTexImage1D(target, level, internalFormat, width, border, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexImage1D(int target, int level, int internalFormat, int width, int border, int imageSize, IntPtr data) => _glCompressedTexImage1D(target, level, internalFormat, width, border, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a three-dimensional texture image in a compressed format.
@@ -2282,10 +1961,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexImage3D(target, level, internalFormat, width, height, depth, border, imageSize, data);
-        }
+        public static void glCompressedTexImage3D(int target, int level, int internalFormat, int width, int height, int depth, int border, int imageSize, /*const*/ void* data) => _glCompressedTexImage3D(target, level, internalFormat, width, height, depth, border, imageSize, data);
 
         /// <summary>
         /// Specify a two-dimensional texture image in a compressed format
@@ -2298,10 +1974,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexImage2D(target, level, internalFormat, width, height, border, imageSize, data);
-        }
+        public static void glCompressedTexImage2D(int target, int level, int internalFormat, int width, int height, int border, int imageSize, /*const*/ void* data) => _glCompressedTexImage2D(target, level, internalFormat, width, height, border, imageSize, data);
 
         /// <summary>
         /// Specify a one-dimensional texture image in a compressed format.
@@ -2313,10 +1986,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="border">This value must be 0.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexImage1D(int target, int level, int internalFormat, int width, int border, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexImage1D(target, level, internalFormat, width, border, imageSize, data);
-        }
+        public static void glCompressedTexImage1D(int target, int level, int internalFormat, int width, int border, int imageSize, /*const*/ void* data) => _glCompressedTexImage1D(target, level, internalFormat, width, border, imageSize, data);
 
         /// <summary>
         /// Specify a three-dimensional texture sub-image in a compressed format.
@@ -2332,10 +2002,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int imageSize, IntPtr data) => _glCompressedTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a two-dimensional texture sub-image in a compressed format.
@@ -2349,10 +2016,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage2D(target, level, xOffset, yOffset, width, height, format, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int imageSize, IntPtr data) => _glCompressedTexSubImage2D(target, level, xOffset, yOffset, width, height, format, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a one-dimensional texture sub-image in a compressed format.
@@ -2364,10 +2028,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage1D(int target, int level, int xOffset, int width, int format, int imageSize, IntPtr data)
-        {
-            _glCompressedTexSubImage1D(target, level, xOffset, width, format, imageSize, data.ToPointer());
-        }
+        public static void glCompressedTexSubImage1D(int target, int level, int xOffset, int width, int format, int imageSize, IntPtr data) => _glCompressedTexSubImage1D(target, level, xOffset, width, format, imageSize, data.ToPointer());
 
         /// <summary>
         /// Specify a three-dimensional texture sub-image in a compressed format.
@@ -2383,10 +2044,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, imageSize, data);
-        }
+        public static void glCompressedTexSubImage3D(int target, int level, int xOffset, int yOffset, int zOffset, int width, int height, int depth, int format, int imageSize, /*const*/ void* data) => _glCompressedTexSubImage3D(target, level, xOffset, yOffset, zOffset, width, height, depth, format, imageSize, data);
 
         /// <summary>
         /// Specify a two-dimensional texture sub-image in a compressed format.
@@ -2400,10 +2058,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexSubImage2D(target, level, xOffset, yOffset, width, height, format, imageSize, data);
-        }
+        public static void glCompressedTexSubImage2D(int target, int level, int xOffset, int yOffset, int width, int height, int format, int imageSize, /*const*/ void* data) => _glCompressedTexSubImage2D(target, level, xOffset, yOffset, width, height, format, imageSize, data);
 
         /// <summary>
         /// Specify a one-dimensional texture sub-image in a compressed format.
@@ -2415,10 +2070,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="format">Specifies the format of the compressed image data stored at address <paramref name="data"/>.</param>
         /// <param name="imageSize">Specifies the number of unsigned bytes of image data starting at the address specified by <paramref name="data"/>.</param>
         /// <param name="data">Specifies a pointer to the compressed image data in memory.</param>
-        public static void glCompressedTexSubImage1D(int target, int level, int xOffset, int width, int format, int imageSize, /*const*/ void* data)
-        {
-            _glCompressedTexSubImage1D(target, level, xOffset, width, format, imageSize, data);
-        }
+        public static void glCompressedTexSubImage1D(int target, int level, int xOffset, int width, int format, int imageSize, /*const*/ void* data) => _glCompressedTexSubImage1D(target, level, xOffset, width, format, imageSize, data);
 
         /// <summary>
         ///     Specify pixel arithmetic for RGB and alpha components separately.
@@ -2439,20 +2091,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Specified how the alpha destination blending factor is computed.
         ///     <para>The initial value is GL_ZERO.</para>
         /// </param>
-        public static void glBlendFuncSeparate(int sFactorRgb, int dFactorRgb, int sFactorAlpha, int dFactorAlpha)
-        {
-            _glBlendFuncSeparate(sFactorRgb, dFactorRgb, sFactorAlpha, dFactorAlpha);
-        }
+        public static void glBlendFuncSeparate(int sFactorRgb, int dFactorRgb, int sFactorAlpha, int dFactorAlpha) => _glBlendFuncSeparate(sFactorRgb, dFactorRgb, sFactorAlpha, dFactorAlpha);
 
         /// <summary>
         ///     Delete named framebuffer objects.
         /// </summary>
         /// <param name="n">Specifies the number of framebuffer objects to be deleted.</param>
         /// <param name="buffers">Specifies an array of framebuffer objects to be deleted.</param>
-        public static void glDeleteFramebuffers(int n, /*const*/ uint* buffers)
-        {
-            _glDeleteFramebuffers(n, buffers);
-        }
+        public static void glDeleteFramebuffers(int n, /*const*/ uint* buffers) => _glDeleteFramebuffers(n, buffers);
 
         /// <summary>
         ///     Delete named framebuffer objects.
@@ -2475,66 +2121,45 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Deletes a single framebuffer object.
         /// </summary>
         /// <param name="buffer">A framebuffer to be deleted.</param>
-        public static void glDeleteFramebuffer(uint buffer)
-        {
-            _glDeleteFramebuffers(1, &buffer);
-        }
+        public static void glDeleteFramebuffer(uint buffer) => _glDeleteFramebuffers(1, &buffer);
 
         /// <summary>
         ///     Bind a named buffer object.
         /// </summary>
         /// <param name="target">Specifies the target to which the buffer object is bound.</param>
         /// <param name="buffer">Specifies the name of a buffer object.</param>
-        public static void glBindBuffer(int target, uint buffer)
-        {
-            _glBindBuffer(target, buffer);
-        }
+        public static void glBindBuffer(int target, uint buffer) => _glBindBuffer(target, buffer);
 
         /// <summary>
         /// Bind a named framebuffer object.
         /// </summary>
         /// <param name="framebuffer">Specifies the name of a framebuffer object.</param>
-        public static void glBindFramebuffer(uint framebuffer)
-        {
-            _glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-        }
+        public static void glBindFramebuffer(uint framebuffer) => _glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
 
         /// <summary>
         /// Bind a named renderbuffer object.
         /// </summary>
         /// <param name="renderbuffer">Specifies the name of a renderbuffer object.</param>
-        public static void glBindRenderbuffer(uint renderbuffer)
-        {
-            _glBindRenderbuffer(GL_RENDERBUFFER, renderbuffer);
-        }
+        public static void glBindRenderbuffer(uint renderbuffer) => _glBindRenderbuffer(GL_RENDERBUFFER, renderbuffer);
 
         /// <summary>
         ///     Deletes a single buffer object.
         /// </summary>
         /// <param name="buffer">A buffer to be deleted.</param>
-        public static void glDeleteBuffer(uint buffer)
-        {
-            _glDeleteBuffers(1, &buffer);
-        }
+        public static void glDeleteBuffer(uint buffer) => _glDeleteBuffers(1, &buffer);
 
         /// <summary>
         ///     Deletes a single renderbuffer object.
         /// </summary>
         /// <param name="renderbuffer">A renderbuffer to be deleted.</param>
-        public static void glDeleteRenderbuffer(uint renderbuffer)
-        {
-            _glDeleteRenderbuffers(1, &renderbuffer);
-        }
+        public static void glDeleteRenderbuffer(uint renderbuffer) => _glDeleteRenderbuffers(1, &renderbuffer);
 
         /// <summary>
         ///     Delete named renderbuffer objects.
         /// </summary>
         /// <param name="n">Specifies the number of renderbuffer objects to be deleted.</param>
         /// <param name="buffers">Specifies an array of renderbuffer objects to be deleted.</param>
-        public static void glDeleteRenderbuffers(int n, /*const*/ uint* buffers)
-        {
-            _glDeleteRenderbuffers(n, buffers);
-        }
+        public static void glDeleteRenderbuffers(int n, /*const*/ uint* buffers) => _glDeleteRenderbuffers(n, buffers);
 
         /// <summary>
         ///     Delete named renderbuffer objects.
@@ -2558,10 +2183,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="n">Specifies the number of buffer objects to be deleted.</param>
         /// <param name="buffers">Specifies an array of buffer objects to be deleted.</param>
-        public static void glDeleteBuffers(int n, /*const*/ uint* buffers)
-        {
-            _glDeleteBuffers(n, buffers);
-        }
+        public static void glDeleteBuffers(int n, /*const*/ uint* buffers) => _glDeleteBuffers(n, buffers);
 
         /// <summary>
         ///     Delete named buffer objects.
@@ -2585,10 +2207,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="n">Specifies the number of framebuffer object names to be generated.</param>
         /// <param name="buffers">Specifies an array in which the generated framebuffer object names are stored.</param>
-        public static void glGenFramebuffers(int n, uint* buffers)
-        {
-            _glGenFramebuffers(n, buffers);
-        }
+        public static void glGenFramebuffers(int n, uint* buffers) => _glGenFramebuffers(n, buffers);
 
         /// <summary>
         ///     Generate a single framebuffer object name.
@@ -2624,10 +2243,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="n">Specifies the number of renderbuffer object names to be generated.</param>
         /// <param name="buffers">Specifies an array in which the generated renderbuffer object names are stored.</param>
-        public static void glGenRenderbuffers(int n, uint* buffers)
-        {
-            _glGenRenderbuffers(n, buffers);
-        }
+        public static void glGenRenderbuffers(int n, uint* buffers) => _glGenRenderbuffers(n, buffers);
 
         /// <summary>
         ///     Generate a single renderbuffer object name.
@@ -2663,10 +2279,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="n">Specifies the number of buffer object names to be generated.</param>
         /// <param name="buffers">Specifies an array in which the generated buffer object names are stored.</param>
-        public static void glGenBuffers(int n, uint* buffers)
-        {
-            _glGenBuffers(n, buffers);
-        }
+        public static void glGenBuffers(int n, uint* buffers) => _glGenBuffers(n, buffers);
 
         /// <summary>
         ///     Generate a single buffer object name.
@@ -2702,40 +2315,28 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="buffer">Specifies a value that may be the name of a buffer object.</param>
         /// <returns><c>true</c> if object is a buffer, otherwise <c>false</c>.</returns>
-        public static bool glIsBuffer(uint buffer)
-        {
-            return _glIsBuffer(buffer);
-        }
+        public static bool glIsBuffer(uint buffer) => _glIsBuffer(buffer);
 
         /// <summary>
         /// Determine if a name corresponds to a framebuffer object.
         /// </summary>
         /// <param name="framebuffer">Specifies a value that may be the name of a framebuffer object.</param>
         /// <returns><c>true</c> if value is a framebuffer object, otherwise <c>false</c>.</returns>
-        public static bool glIsFramebuffer(uint framebuffer)
-        {
-            return _glIsFramebuffer(framebuffer);
-        }
+        public static bool glIsFramebuffer(uint framebuffer) => _glIsFramebuffer(framebuffer);
 
         /// <summary>
         /// Determine if a name corresponds to a renderbuffer object.
         /// </summary>
         /// <param name="renderbuffer">Specifies a value that may be the name of a renderbuffer object.</param>
         /// <returns><c>true</c> if object is a renderbuffer, otherwise <c>false</c>.</returns>
-        public static bool glIsRenderbuffer(uint renderbuffer)
-        {
-            return _glIsRenderbuffer(renderbuffer);
-        }
+        public static bool glIsRenderbuffer(uint renderbuffer) => _glIsRenderbuffer(renderbuffer);
 
         /// <summary>
         ///     Generate sampler object names.
         /// </summary>
         /// <param name="count">Specifies the number of sampler object names to generate.</param>
         /// <param name="samplers">Specifies an array in which the generated sampler object names are stored.</param>
-        public static void glGenSamplers(int count, uint* samplers)
-        {
-            _glGenSamplers(count, samplers);
-        }
+        public static void glGenSamplers(int count, uint* samplers) => _glGenSamplers(count, samplers);
 
         /// <summary>
         ///     Generate sampler object names.
@@ -2770,10 +2371,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="sampler">Specifies a value that may be the name of a sampler object.</param>
         /// <returns><c>true</c> if object is a sampler object, otherwise <c>false</c>.</returns>
-        public static bool glIsSampler(uint sampler)
-        {
-            return _glIsSampler(sampler);
-        }
+        public static bool glIsSampler(uint sampler) => _glIsSampler(sampler);
 
         /// <summary>
         ///     Delete named sampler objects.
@@ -2792,29 +2390,20 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="count">Specifies the number of sampler objects to be deleted.</param>
         /// <param name="samplers">Specifies an array of sampler objects to be deleted.</param>
-        public static void glDeleteSamplers(int count, /*const*/ uint* samplers)
-        {
-            _glDeleteSamplers(count, samplers);
-        }
+        public static void glDeleteSamplers(int count, /*const*/ uint* samplers) => _glDeleteSamplers(count, samplers);
 
         /// <summary>
         ///     Delete a single named sampler object.
         /// </summary>
         /// <param name="sampler">Sampler object to delete.</param>
-        public static void glDeleteSampler(uint sampler)
-        {
-            _glDeleteSamplers(1, &sampler);
-        }
+        public static void glDeleteSampler(uint sampler) => _glDeleteSamplers(1, &sampler);
 
         /// <summary>
         ///     Bind a named sampler to a texturing target.
         /// </summary>
         /// <param name="unit">Specifies the index of the texture unit to which the sampler is bound.</param>
         /// <param name="sampler">Specifies the name of a sampler.</param>
-        public static void glBindSampler(uint unit, uint sampler)
-        {
-            _glBindSampler(unit, sampler);
-        }
+        public static void glBindSampler(uint unit, uint sampler) => _glBindSampler(unit, sampler);
 
         /// <summary>
         /// Attach a level of a texture object as a logical buffer of a framebuffer object.
@@ -2824,10 +2413,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="texTarget">Specifies what type of texture is expected in the texture parameter, or for cube map textures, which face is to be attached.</param>
         /// <param name="texture">Specifies the name of an existing texture object to attach.</param>
         /// <param name="level">Specifies the mipmap level of the texture object to attach.</param>
-        public static void glFramebufferTexture1D(int target, int attachment, int texTarget, uint texture, int level)
-        {
-            _glFramebufferTexture1D(target, attachment, texTarget, texture, level);
-        }
+        public static void glFramebufferTexture1D(int target, int attachment, int texTarget, uint texture, int level) => _glFramebufferTexture1D(target, attachment, texTarget, texture, level);
 
         /// <summary>
         /// Attach a level of a texture object as a logical buffer of a framebuffer object.
@@ -2837,10 +2423,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="texTarget">Specifies what type of texture is expected in the texture parameter, or for cube map textures, which face is to be attached.</param>
         /// <param name="texture">Specifies the name of an existing texture object to attach.</param>
         /// <param name="level">Specifies the mipmap level of the texture object to attach.</param>
-        public static void glFramebufferTexture2D(int target, int attachment, int texTarget, uint texture, int level)
-        {
-            _glFramebufferTexture2D(target, attachment, texTarget, texture, level);
-        }
+        public static void glFramebufferTexture2D(int target, int attachment, int texTarget, uint texture, int level) => _glFramebufferTexture2D(target, attachment, texTarget, texture, level);
 
         /// <summary>
         /// Attach a level of a texture object as a logical buffer of a framebuffer object.
@@ -2851,20 +2434,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="texture">Specifies the name of an existing texture object to attach.</param>
         /// <param name="level">Specifies the mipmap level of the texture object to attach.</param>
         /// <param name="zOffset">The offset on the z-axis.</param>
-        public static void glFramebufferTexture3D(int target, int attachment, int texTarget, uint texture, int level, int zOffset)
-        {
-            _glFramebufferTexture3D(target, attachment, texTarget, texture, level, zOffset);
-        }
+        public static void glFramebufferTexture3D(int target, int attachment, int texTarget, uint texture, int level, int zOffset) => _glFramebufferTexture3D(target, attachment, texTarget, texture, level, zOffset);
 
         /// <summary>
         ///     Check the completeness status of a framebuffer.
         /// </summary>
         /// <param name="target">Specify the target to which the framebuffer is bound to check.</param>
         /// <returns></returns> 
-        public static int glCheckFramebufferStatus(int target)
-        {
-            return _glCheckFramebufferStatus(target);
-        }
+        public static int glCheckFramebufferStatus(int target) => _glCheckFramebufferStatus(target);
 
         /// <summary>
         /// Clear individual buffers of a framebuffer.
@@ -2914,10 +2491,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="buffer">Specify the buffer to clear.</param>
         /// <param name="drawbuffer">Specify a particular draw buffer to clear.</param>
         /// <param name="value">A pointer to the value or values to clear the buffer to.</param>
-        public static void glClearBufferiv(int buffer, int drawbuffer, /*const*/ int* value)
-        {
-            _glClearBufferiv(buffer, drawbuffer, value);
-        }
+        public static void glClearBufferiv(int buffer, int drawbuffer, /*const*/ int* value) => _glClearBufferiv(buffer, drawbuffer, value);
 
         /// <summary>
         /// Clear individual buffers of a framebuffer.
@@ -2925,10 +2499,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="buffer">Specify the buffer to clear.</param>
         /// <param name="drawbuffer">Specify a particular draw buffer to clear.</param>
         /// <param name="value">A pointer to the value or values to clear the buffer to.</param>
-        public static void glClearBufferuiv(int buffer, int drawbuffer, /*const*/ uint* value)
-        {
-            _glClearBufferuiv(buffer, drawbuffer, value);
-        }
+        public static void glClearBufferuiv(int buffer, int drawbuffer, /*const*/ uint* value) => _glClearBufferuiv(buffer, drawbuffer, value);
 
         /// <summary>
         /// Clear individual buffers of a framebuffer.
@@ -2936,10 +2507,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="buffer">Specify the buffer to clear.</param>
         /// <param name="drawbuffer">Specify a particular draw buffer to clear.</param>
         /// <param name="value">A pointer to the value or values to clear the buffer to.</param>
-        public static void glClearBufferfv(int buffer, int drawbuffer, /*const*/ float* value)
-        {
-            _glClearBufferfv(buffer, drawbuffer, value);
-        }
+        public static void glClearBufferfv(int buffer, int drawbuffer, /*const*/ float* value) => _glClearBufferfv(buffer, drawbuffer, value);
 
         /// <summary>
         /// Clear individual buffers of a framebuffer.
@@ -2948,20 +2516,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="drawbuffer">Specify a particular draw buffer to clear.</param>
         /// <param name="depth">The value to clear the depth buffer to.</param>
         /// <param name="stencil">The value to clear the stencil buffer to.</param>
-        public static void glClearBufferfi(int buffer, int drawbuffer, float depth, int stencil)
-        {
-            _glClearBufferfi(buffer, drawbuffer, depth, stencil);
-        }
+        public static void glClearBufferfi(int buffer, int drawbuffer, float depth, int stencil) => _glClearBufferfi(buffer, drawbuffer, depth, stencil);
 
         /// <summary>
         /// Attaches a shader object to a program object.
         /// </summary>
         /// <param name="program">Specifies the program object to which a shader object will be attached.</param>
         /// <param name="shader">Specifies the shader object that is to be attached.</param>
-        public static void glAttachShader(uint program, uint shader)
-        {
-            _glAttachShader(program, shader);
-        }
+        public static void glAttachShader(uint program, uint shader) => _glAttachShader(program, shader);
 
         /// <summary>
         ///     Bind a buffer object to an indexed buffer target.
@@ -2975,10 +2537,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="index">Specify the index of the binding point within the array specified by target.</param>
         /// <param name="buffer">The name of a buffer object to bind to the specified binding point.</param>
-        public static void glBindBufferBase(int target, uint index, uint buffer)
-        {
-            _glBindBufferBase(target, index, buffer);
-        }
+        public static void glBindBufferBase(int target, uint index, uint buffer) => _glBindBufferBase(target, index, buffer);
 
         /// <summary>
         ///     Record the GL time into a query object after all previous commands have reached the GL server but have not yet
@@ -2986,20 +2545,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="id">Specify the name of a query object into which to record the GL time.</param>
         /// <param name="target">Specify the counter to query. must be GL_TIMESTAMP.</param>
-        public static void glQueryCounter(uint id, int target)
-        {
-            _glQueryCounter(id, target);
-        }
+        public static void glQueryCounter(uint id, int target) => _glQueryCounter(id, target);
 
         /// <summary>
         ///     Set the value of a sub-word of the sample mask.
         /// </summary>
         /// <param name="maskNumber">Specifies which 32-bit sub-word of the sample mask to update.</param>
         /// <param name="mask">Specifies the new value of the mask sub-word.</param>
-        public static void glSampleMaski(uint maskNumber, uint mask)
-        {
-            _glSampleMaski(maskNumber, mask);
-        }
+        public static void glSampleMaski(uint maskNumber, uint mask) => _glSampleMaski(maskNumber, mask);
 
         /// <summary>
         ///     Query the bindings of color indices to user-defined varying out variables.
@@ -3023,38 +2576,26 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// Start transform feedback operation.
         /// </summary>
         /// <param name="primitiveMode">Specify the output type of the primitives that will be recorded into the buffer objects that are bound for transform feedback.</param>
-        public static void glBeginTransformFeedback(int primitiveMode)
-        {
-            _glBeginTransformFeedback(primitiveMode);
-        }
+        public static void glBeginTransformFeedback(int primitiveMode) => _glBeginTransformFeedback(primitiveMode);
 
         /// <summary>
         /// End transform feedback operation.
         /// </summary>
-        public static void glEndTransformFeedback()
-        {
-            _glEndTransformFeedback();
-        }
+        public static void glEndTransformFeedback() => _glEndTransformFeedback();
 
         /// <summary>
         /// Enable or disable server-side GL capabilities.
         /// </summary>
         /// <param name="target">Specifies a symbolic constant indicating a GL capability.</param>
         /// <param name="index">Specifies the index of the switch to enable.</param>
-        public static void glEnablei(int target, uint index)
-        {
-            _glEnablei(target, index);
-        }
+        public static void glEnablei(int target, uint index) => _glEnablei(target, index);
 
         /// <summary>
         /// Disable server-side GL capabilities
         /// </summary>
         /// <param name="target">Specifies a symbolic constant indicating a GL capability.</param>
         /// <param name="index">Specifies the index of the switch to disable</param>
-        public static void glDisablei(int target, uint index)
-        {
-            _glDisablei(target, index);
-        }
+        public static void glDisablei(int target, uint index) => _glDisablei(target, index);
 
         /// <summary>
         /// Test whether a capability is enabled.
@@ -3062,104 +2603,71 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies a symbolic constant indicating a GL capability.</param>
         /// <param name="index">Specifies the index of the capability.</param>
         /// <returns><c>true</c> if capability is enabled, otherwise <c>false</c>.</returns>
-        public static bool glIsEnabledi(int target, uint index)
-        {
-            return _glIsEnabledi(target, index);
-        }
+        public static bool glIsEnabledi(int target, uint index) => _glIsEnabledi(target, index);
 
         /// <summary>
         ///     Compiles a shader object.
         /// </summary>
         /// <param name="shader">Specifies the shader object to be compiled.</param>
-        public static void glCompileShader(uint shader)
-        {
-            _glCompileShader(shader);
-        }
+        public static void glCompileShader(uint shader) => _glCompileShader(shader);
 
         /// <summary>
         ///     Creates a shader program object.
         /// </summary>
         /// <returns>An empty program object, a non-zero value by which it can be referenced.</returns>
-        public static uint glCreateProgram()
-        {
-            return _glCreateProgram();
-        }
+        public static uint glCreateProgram() => _glCreateProgram();
 
         /// <summary>
         ///     Creates a shader object.
         /// </summary>
         /// <param name="type">Specifies the type of shader to be created.<para>Must be one of GL_VERTEX_SHADER, GL_GEOMETRY_SHADER, or GL_FRAGMENT_SHADER.</para></param>
         /// <returns>An empty shader object, a non-zero value by which it can be referenced.</returns>
-        public static uint glCreateShader(int type)
-        {
-            return _glCreateShader(type);
-        }
+        public static uint glCreateShader(int type) => _glCreateShader(type);
 
         /// <summary>
         ///     Determines if a name corresponds to a program object.
         /// </summary>
         /// <param name="program">The potential program object to check.</param>
         /// <returns><c>true</c> if object is a program, otherwise <c>false</c>.</returns>
-        public static bool glIsProgram(uint program)
-        {
-            return _glIsProgram(program);
-        }
+        public static bool glIsProgram(uint program) => _glIsProgram(program);
 
         /// <summary>
         ///     Determines if a name corresponds to a shader object.
         /// </summary>
         /// <param name="shader">The potential program object to check.</param>
         /// <returns><c>true</c> if object is a shader, otherwise <c>false</c>.</returns>
-        public static bool glIsShader(uint shader)
-        {
-            return _glIsShader(shader);
-        }
+        public static bool glIsShader(uint shader) => _glIsShader(shader);
 
         /// <summary>
         ///     Deletes a program object.
         /// </summary>
         /// <param name="program">Specifies the program object to be deleted.</param>
-        public static void glDeleteProgram(uint program)
-        {
-            _glDeleteProgram(program);
-        }
+        public static void glDeleteProgram(uint program) => _glDeleteProgram(program);
 
         /// <summary>
         ///     Deletes a shader object.
         /// </summary>
         /// <param name="shader">Specifies the shader object to be deleted.</param>
-        public static void glDeleteShader(uint shader)
-        {
-            _glDeleteShader(shader);
-        }
+        public static void glDeleteShader(uint shader) => _glDeleteShader(shader);
 
         /// <summary>
         ///     Detaches a shader object from a program object to which it is attached.
         /// </summary>
         /// <param name="program">Specifies the program object from which to detach the shader object.</param>
         /// <param name="shader">Specifies the shader object to be detached.</param>
-        public static void glDetachShader(uint program, uint shader)
-        {
-            _glDetachShader(program, shader);
-        }
+        public static void glDetachShader(uint program, uint shader) => _glDetachShader(program, shader);
 
         /// <summary>
         ///     Installs a program object as part of current rendering state.
         /// </summary>
         /// <param name="program">Specifies the handle of the program object whose executables are to be used as part of current rendering state.</param>
-        public static void glUseProgram(uint program)
-        {
-            _glUseProgram(program);
-        }
+        public static void glUseProgram(uint program) => _glUseProgram(program);
 
         /// <summary>
         ///     Links a program object.
         /// </summary>
         /// <param name="program">Specifies the handle of the program object to be linked.</param>
-        public static void glLinkProgram(uint program)
-        {
-            _glLinkProgram(program);
-        }
+        public static void glLinkProgram(uint program) => _glLinkProgram(program);
 
         /// <summary>
         ///      Replaces the source code in a shader object.
@@ -3168,10 +2676,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of elements in the string and length arrays.</param>
         /// <param name="str">Specifies an array of pointers to strings containing the source code to be loaded into the shader.</param>
         /// <param name="length">Specifies an array of string lengths.</param>
-        public static void glShaderSource(uint shader, int count, /*const*/ byte** str, /*const*/ int* length)
-        {
-            _glShaderSource(shader, count, str, length);
-        }
+        public static void glShaderSource(uint shader, int count, /*const*/ byte** str, /*const*/ int* length) => _glShaderSource(shader, count, str, length);
 
         /// <summary>
         ///      Replaces the source code in a shader object.
@@ -3198,10 +2703,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">Specifies the program object to be queried.</param>
         /// <param name="name">Points to a null terminated string containing the name of the uniform variable whose location is to be queried.</param>
         /// <returns>An integer that represents the location of a specific uniform variable within a program object.</returns>
-        public static int glGetUniformLocation(uint program, /*const*/ byte* name)
-        {
-            return _glGetUniformLocation(program, name);
-        }
+        public static int glGetUniformLocation(uint program, /*const*/ byte* name) => _glGetUniformLocation(program, name);
 
         /// <summary>
         ///      Returns the location of a uniform variable.
@@ -3321,10 +2823,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="program">Specifies the handle of the program object to be validated.</param>
         /// <seealso cref="glGetProgramInfoLog"/>
-        public static void glValidateProgram(uint program)
-        {
-            _glValidateProgram(program);
-        }
+        public static void glValidateProgram(uint program) => _glValidateProgram(program);
 
         /// <summary>
         ///     Render multiple sets of primitives by specifying indices of array data elements.
@@ -3337,10 +2836,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="drawCount">Specifies the size of the count and indices arrays.</param>
-        public static void glMultiDrawElements(int mode, /*const*/ int* count, int type, /*const*/void* /*const*/* indices, int drawCount)
-        {
-            _glMultiDrawElements(mode, count, type, indices, drawCount);
-        }
+        public static void glMultiDrawElements(int mode, /*const*/ int* count, int type, /*const*/void* /*const*/* indices, int drawCount) => _glMultiDrawElements(mode, count, type, indices, drawCount);
 
         /// <summary>
         ///     Render multiple sets of primitives by specifying indices of array data elements.
@@ -3370,10 +2866,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="first">Points to an array of starting indices in the enabled arrays.</param>
         /// <param name="count">Points to an array of the number of indices to be rendered.</param>
         /// <param name="drawCount">Specifies the size of the first and count.</param>
-        public static void glMultiDrawArrays(int mode, /*const*/ int* first, /*const*/ int* count, int drawCount)
-        {
-            _glMultiDrawArrays(mode, first, count, drawCount);
-        }
+        public static void glMultiDrawArrays(int mode, /*const*/ int* first, /*const*/ int* count, int drawCount) => _glMultiDrawArrays(mode, first, count, drawCount);
 
         /// <summary>
         ///     Render multiple sets of primitives from array data.
@@ -3400,10 +2893,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="attachment">Specifies the attachment point of the framebuffer.</param>
         /// <param name="texture">Specifies the name of an existing texture object to attach.</param>
         /// <param name="level">Specifies the mipmap level of the texture object to attach.</param>
-        public static void glFramebufferTexture(int target, int attachment, uint texture, int level)
-        {
-            _glFramebufferTexture(target, attachment, texture, level);
-        }
+        public static void glFramebufferTexture(int target, int attachment, uint texture, int level) => _glFramebufferTexture(target, attachment, texture, level);
 
         /// <summary>
         ///     Attach a renderbuffer object to a framebuffer object.
@@ -3418,10 +2908,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="renderbufferTarget">Specifies the renderbuffer target. The symbolic constant must be GL_RENDERBUFFER.</param>
         /// <param name="renderbuffer">Specifies the renderbuffer object that is to be attached.</param>
-        public static void glFramebufferRenderbuffer(int target, int attachment, int renderbufferTarget, uint renderbuffer)
-        {
-            _glFramebufferRenderbuffer(target, attachment, renderbufferTarget, renderbuffer);
-        }
+        public static void glFramebufferRenderbuffer(int target, int attachment, int renderbufferTarget, uint renderbuffer) => _glFramebufferRenderbuffer(target, attachment, renderbufferTarget, renderbuffer);
 
         /// <summary>
         ///     Attach a renderbuffer object to a framebuffer object.
@@ -3434,10 +2921,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="renderbuffer">Specifies the renderbuffer object that is to be attached.</param>
-        public static void glFramebufferRenderbuffer(int attachment, uint renderbuffer)
-        {
-            _glFramebufferRenderbuffer(GL_FRAMEBUFFER, attachment, GL_RENDERBUFFER, renderbuffer);
-        }
+        public static void glFramebufferRenderbuffer(int attachment, uint renderbuffer) => _glFramebufferRenderbuffer(GL_FRAMEBUFFER, attachment, GL_RENDERBUFFER, renderbuffer);
 
         /// <summary>
         ///     Returns a subset of a buffer object's data store.
@@ -3449,10 +2933,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being returned.</param>
         /// <param name="data">Specifies a pointer to the location where buffer object data is returned.</param>
-        public static void glGetBufferSubData(int target, int offset, int size, IntPtr data)
-        {
-            _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
-        }
+        public static void glGetBufferSubData(int target, int offset, int size, IntPtr data) => _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
 
         /// <summary>
         ///     Returns a subset of a buffer object's data store.
@@ -3464,10 +2945,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being returned.</param>
         /// <param name="data">Specifies a pointer to the location where buffer object data is returned.</param>
-        public static void glGetBufferSubData(int target, long offset, long size, IntPtr data)
-        {
-            _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
-        }
+        public static void glGetBufferSubData(int target, long offset, long size, IntPtr data) => _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
 
         /// <summary>
         ///     Returns a subset of a buffer object's data store.
@@ -3479,10 +2957,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being returned.</param>
         /// <param name="data">Specifies a pointer to the location where buffer object data is returned.</param>
-        public static void glGetBufferSubData(int target, int offset, int size, void* data)
-        {
-            _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
-        }
+        public static void glGetBufferSubData(int target, int offset, int size, void* data) => _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
 
         /// <summary>
         ///     Returns a subset of a buffer object's data store.
@@ -3494,10 +2969,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being returned.</param>
         /// <param name="data">Specifies a pointer to the location where buffer object data is returned.</param>
-        public static void glGetBufferSubData(int target, long offset, long size, void* data)
-        {
-            _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
-        }
+        public static void glGetBufferSubData(int target, long offset, long size, void* data) => _glGetBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
 
         /// <summary>
         ///     Map all or part of a buffer object's data store into the client's address space.
@@ -3507,10 +2979,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="length">Specifies the length of the range to be mapped.</param>
         /// <param name="access">Specifies a combination of access flags indicating the desired access to the mapped range.</param>
         /// <returns>A pointer to the beginning of the mapped range.</returns>
-        public static IntPtr glMapBufferRange(int target, int offset, int length, uint access)
-        {
-            return new IntPtr(_glMapBufferRange(target, new IntPtr(offset), new IntPtr(length), access));
-        }
+        public static IntPtr glMapBufferRange(int target, int offset, int length, uint access) => new IntPtr(_glMapBufferRange(target, new IntPtr(offset), new IntPtr(length), access));
 
         /// <summary>
         ///     Map all or part of a buffer object's data store into the client's address space.
@@ -3520,10 +2989,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="length">Specifies the length of the range to be mapped.</param>
         /// <param name="access">Specifies a combination of access flags indicating the desired access to the mapped range.</param>
         /// <returns>A pointer to the beginning of the mapped range.</returns>
-        public static IntPtr glMapBufferRange(int target, long offset, long length, uint access)
-        {
-            return new IntPtr(_glMapBufferRange(target, new IntPtr(offset), new IntPtr(length), access));
-        }
+        public static IntPtr glMapBufferRange(int target, long offset, long length, uint access) => new IntPtr(_glMapBufferRange(target, new IntPtr(offset), new IntPtr(length), access));
 
         /// <summary>
         ///     Indicate modifications to a range of a mapped buffer.
@@ -3531,10 +2997,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target to which the buffer object is bound.</param>
         /// <param name="offset">Specifies the start of the buffer subrange, in basic machine units.</param>
         /// <param name="length">Specifies the length of the buffer subrange, in basic machine units.</param>
-        public static void glFlushMappedBufferRange(int target, int offset, int length)
-        {
-            _glFlushMappedBufferRange(target, new IntPtr(offset), new IntPtr(length));
-        }
+        public static void glFlushMappedBufferRange(int target, int offset, int length) => _glFlushMappedBufferRange(target, new IntPtr(offset), new IntPtr(length));
 
         /// <summary>
         ///     Indicate modifications to a range of a mapped buffer.
@@ -3542,10 +3005,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target to which the buffer object is bound.</param>
         /// <param name="offset">Specifies the start of the buffer subrange, in basic machine units.</param>
         /// <param name="length">Specifies the length of the buffer subrange, in basic machine units.</param>
-        public static void glFlushMappedBufferRange(int target, long offset, long length)
-        {
-            _glFlushMappedBufferRange(target, new IntPtr(offset), new IntPtr(length));
-        }
+        public static void glFlushMappedBufferRange(int target, long offset, long length) => _glFlushMappedBufferRange(target, new IntPtr(offset), new IntPtr(length));
 
         /// <summary>
         ///     Attach a single layer of a texture to a framebuffer.
@@ -3567,10 +3027,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="level">Specifies the mipmap level of texture to attach.</param>
         /// <param name="layer">Specifies the layer of texture to attach.</param>
-        public static void glFramebufferTextureLayer(int target, int attachment, uint texture, int level, int layer)
-        {
-            _glFramebufferTextureLayer(target, attachment, texture, level, layer);
-        }
+        public static void glFramebufferTextureLayer(int target, int attachment, uint texture, int level, int layer) => _glFramebufferTextureLayer(target, attachment, texture, level, layer);
 
         /// <summary>
         ///     Bind a range within a buffer object to an indexed buffer target.
@@ -3589,10 +3046,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     The amount of data in machine units that can be read from the buffer object while used as an indexed
         ///     target.
         /// </param>
-        public static void glBindBufferRange(int target, uint index, uint buffer, int offset, int size)
-        {
-            _glBindBufferRange(target, index, buffer, new IntPtr(offset), new IntPtr(size));
-        }
+        public static void glBindBufferRange(int target, uint index, uint buffer, int offset, int size) => _glBindBufferRange(target, index, buffer, new IntPtr(offset), new IntPtr(size));
 
         /// <summary>
         ///     Bind a range within a buffer object to an indexed buffer target.
@@ -3611,10 +3065,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     The amount of data in machine units that can be read from the buffer object while used as an indexed
         ///     target.
         /// </param>
-        public static void glBindBufferRange(int target, uint index, uint buffer, long offset, long size)
-        {
-            _glBindBufferRange(target, index, buffer, new IntPtr(offset), new IntPtr(size));
-        }
+        public static void glBindBufferRange(int target, uint index, uint buffer, long offset, long size) => _glBindBufferRange(target, index, buffer, new IntPtr(offset), new IntPtr(size));
 
         /// <summary>
         ///     Copy a block of pixels from one framebuffer object to another.
@@ -3629,10 +3080,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="dstY1">The upper right corner of the write buffer on the y-axis.</param>
         /// <param name="mask">The bitwise OR of the flags indicating which buffers are to be copied.<para>The allowed flags are GL_COLOR_BUFFER_BIT, GL_DEPTH_BUFFER_BIT and GL_STENCIL_BUFFER_BIT.</para></param>
         /// <param name="filter">Specifies the interpolation to be applied if the image is stretched.<para>Must be GL_NEAREST or GL_LINEAR.</para></param>
-        public static void glBlitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, int filter)
-        {
-            _glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
-        }
+        public static void glBlitFramebuffer(int srcX0, int srcY0, int srcX1, int srcY1, int dstX0, int dstY0, int dstX1, int dstY1, uint mask, int filter) => _glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
 
         /// <summary>
         /// Establish data storage, format and dimensions of a renderbuffer object's image.
@@ -3641,50 +3089,35 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="internalFormat">Specifies the internal format to use for the renderbuffer object's image.</param>
         /// <param name="width">Specifies the width of the renderbuffer, in pixels.</param>
         /// <param name="height">Specifies the height of the renderbuffer, in pixels.</param>
-        public static void glRenderbufferStorage(int target, int internalFormat, int width, int height)
-        {
-            _glRenderbufferStorage(target, internalFormat, width, height);
-        }
+        public static void glRenderbufferStorage(int target, int internalFormat, int width, int height) => _glRenderbufferStorage(target, internalFormat, width, height);
 
         /// <summary>
         ///     Set the current color as a packed value.
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glColorP3ui(int type, uint color)
-        {
-            _glColorP3ui(type, color);
-        }
+        public static void glColorP3ui(int type, uint color) => _glColorP3ui(type, color);
 
         /// <summary>
         ///     Set the current color as a packed value.
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glColorP3uiv(int type, /*const*/ uint* color)
-        {
-            _glColorP3uiv(type, color);
-        }
+        public static void glColorP3uiv(int type, /*const*/ uint* color) => _glColorP3uiv(type, color);
 
         /// <summary>
         ///     Set the current color as a packed value.
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glColorP4ui(int type, uint color)
-        {
-            _glColorP4ui(type, color);
-        }
+        public static void glColorP4ui(int type, uint color) => _glColorP4ui(type, color);
 
         /// <summary>
         ///     Set the current color as a packed value.
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glColorP4uiv(int type, /*const*/ uint* color)
-        {
-            _glColorP4uiv(type, color);
-        }
+        public static void glColorP4uiv(int type, /*const*/ uint* color) => _glColorP4uiv(type, color);
 
         /// <summary>
         ///     Set the current color as a packed value.
@@ -3717,10 +3150,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glSecondaryColorP3ui(int type, uint color)
-        {
-            _glSecondaryColorP3ui(type, color);
-        }
+        public static void glSecondaryColorP3ui(int type, uint color) => _glSecondaryColorP3ui(type, color);
 
         /// <summary>
         ///     Set the current color as a packed value.
@@ -3740,10 +3170,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the data type of each color components.</param>
         /// <param name="color">The packed color value.</param>
-        public static void glSecondaryColorP3uiv(int type, /*const*/ uint* color)
-        {
-            _glSecondaryColorP3uiv(type, color);
-        }
+        public static void glSecondaryColorP3uiv(int type, /*const*/ uint* color) => _glSecondaryColorP3uiv(type, color);
 
         /// <summary>
         ///     Updates a subset of a buffer object's data store.
@@ -3755,10 +3182,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being replaced.</param>
         /// <param name="data">Specifies a pointer to the new data that will be copied into the data store.</param>
-        public static void glBufferSubData(int target, int offset, int size, IntPtr data)
-        {
-            _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
-        }
+        public static void glBufferSubData(int target, int offset, int size, IntPtr data) => _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
 
         /// <summary>
         ///     Updates a subset of a buffer object's data store.
@@ -3770,10 +3194,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being replaced.</param>
         /// <param name="data">Specifies a pointer to the new data that will be copied into the data store.</param>
-        public static void glBufferSubData(int target, long offset, long size, IntPtr data)
-        {
-            _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
-        }
+        public static void glBufferSubData(int target, long offset, long size, IntPtr data) => _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data.ToPointer());
 
 
         /// <summary>
@@ -3786,10 +3207,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being replaced.</param>
         /// <param name="data">Specifies a pointer to the new data that will be copied into the data store.</param>
-        public static void glBufferSubData(int target, int offset, int size, /*const*/ void* data)
-        {
-            _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
-        }
+        public static void glBufferSubData(int target, int offset, int size, /*const*/ void* data) => _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
 
         /// <summary>
         ///     Updates a subset of a buffer object's data store.
@@ -3801,30 +3219,21 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="size">Specifies the size in bytes of the data store region being replaced.</param>
         /// <param name="data">Specifies a pointer to the new data that will be copied into the data store.</param>
-        public static void glBufferSubData(int target, long offset, long size, /*const*/ void* data)
-        {
-            _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
-        }
+        public static void glBufferSubData(int target, long offset, long size, /*const*/ void* data) => _glBufferSubData(target, new IntPtr(offset), new IntPtr(size), data);
 
         /// <summary>
         ///     Set the current normal vector.
         /// </summary>
         /// <param name="type">The type.</param>
         /// <param name="coords">The coords.</param>
-        public static void glNormalP3ui(int type, uint coords)
-        {
-            _glNormalP3ui(type, coords);
-        }
+        public static void glNormalP3ui(int type, uint coords) => _glNormalP3ui(type, coords);
 
         /// <summary>
         ///     Set the current normal vector.
         /// </summary>
         /// <param name="type">The type.</param>
         /// <param name="coords">The coords.</param>
-        public static void glNormalP3uiv(int type, /*const*/ uint* coords)
-        {
-            _glNormalP3uiv(type, coords);
-        }
+        public static void glNormalP3uiv(int type, /*const*/ uint* coords) => _glNormalP3uiv(type, coords);
 
         /// <summary>
         ///     Set the current normal vector.
@@ -3892,10 +3301,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="maxCount">Specifies the size of the array for storing the returned object names.</param>
         /// <param name="count">Returns the number of names actually returned in shaders.</param>
         /// <param name="shaders">Specifies an array that is used to return the names of attached shader objects.</param>
-        public static void glGetAttachedShaders(uint program, int maxCount, int* count, uint* shaders)
-        {
-            _glGetAttachedShaders(program, maxCount, count, shaders);
-        }
+        public static void glGetAttachedShaders(uint program, int maxCount, int* count, uint* shaders) => _glGetAttachedShaders(program, maxCount, count, shaders);
 
         /// <summary>
         /// Returns the handles of the shader objects attached to a program object.
@@ -3985,10 +3391,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// Generate mipmaps for a specified texture object.
         /// </summary>
         /// <param name="target">Specifies the target to which the texture object is bound.<para>Must be one of GL_TEXTURE_1D, GL_TEXTURE_2D, GL_TEXTURE_3D, GL_TEXTURE_1D_ARRAY, GL_TEXTURE_2D_ARRAY, GL_TEXTURE_CUBE_MAP, or GL_TEXTURE_CUBE_MAP_ARRAY.</para></param>
-        public static void glGenerateMipmap(int target)
-        {
-            _glGenerateMipmap(target);
-        }
+        public static void glGenerateMipmap(int target) => _glGenerateMipmap(target);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -3996,10 +3399,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the parameter value to be returned.</param>
         /// <param name="index">Specifies the index of the particular element being queried.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetBooleani_v(int target, uint index, bool* data)
-        {
-            _glGetBooleani_v(target, index, data);
-        }
+        public static void glGetBooleani_v(int target, uint index, bool* data) => _glGetBooleani_v(target, index, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -4007,10 +3407,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the parameter value to be returned.</param>
         /// <param name="index">Specifies the index of the particular element being queried.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetIntegeri_v(int target, uint index, int* data)
-        {
-            _glGetIntegeri_v(target, index, data);
-        }
+        public static void glGetIntegeri_v(int target, uint index, int* data) => _glGetIntegeri_v(target, index, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -4018,10 +3415,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the parameter value to be returned.</param>
         /// <param name="index">Specifies the index of the particular element being queried.</param>
         /// <param name="data">Returns the value or values of the specified parameter.</param>
-        public static void glGetInteger64i_v(int target, uint index, long* data)
-        {
-            _glGetInteger64i_v(target, index, data);
-        }
+        public static void glGetInteger64i_v(int target, uint index, long* data) => _glGetInteger64i_v(target, index, data);
 
         /// <summary>
         /// Return the value or values of a selected parameter.
@@ -4121,20 +3515,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="array">Specifies a value that may be the name of a vertex array object.</param>
         /// <returns><c>true</c> if value is a vertex array, otherwise <c>false</c>.</returns>
-        public static bool glIsVertexArray(uint array)
-        {
-            return _glIsVertexArray(array);
-        }
+        public static bool glIsVertexArray(uint array) => _glIsVertexArray(array);
 
         /// <summary>
         ///     Generate vertex array object names.
         /// </summary>
         /// <param name="n">Specifies the number of vertex array object names to generate.</param>
         /// <param name="arrays">Specifies an array in which the generated vertex array object names are stored.</param>
-        public static void glGenVertexArrays(int n, uint* arrays)
-        {
-            _glGenVertexArrays(n, arrays);
-        }
+        public static void glGenVertexArrays(int n, uint* arrays) => _glGenVertexArrays(n, arrays);
 
         /// <summary>
         ///     Generate vertex array object names.
@@ -4170,20 +3558,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Bind a vertex array object.
         /// </summary>
         /// <param name="array">Specifies the name of the vertex array to bind.</param>
-        public static void glBindVertexArray(uint array)
-        {
-            _glBindVertexArray(array);
-        }
+        public static void glBindVertexArray(uint array) => _glBindVertexArray(array);
 
         /// <summary>
         ///     Delete vertex array objects.
         /// </summary>
         /// <param name="n">Specifies the number of vertex array objects to be deleted.</param>
         /// <param name="arrays">Specifies the address of an array containing the n names of the objects to be deleted.</param>
-        public static void glDeleteVertexArrays(int n, /*const*/ uint* arrays)
-        {
-            _glDeleteVertexArrays(n, arrays);
-        }
+        public static void glDeleteVertexArrays(int n, /*const*/ uint* arrays) => _glDeleteVertexArrays(n, arrays);
 
         /// <summary>
         ///     Delete vertex array objects.
@@ -4206,50 +3588,35 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Deletes a single vertex array object.
         /// </summary>
         /// <param name="array">The array to delete.</param>
-        public static void glDeleteVertexArray(uint array)
-        {
-            _glDeleteVertexArrays(1, &array);
-        }
+        public static void glDeleteVertexArray(uint array) => _glDeleteVertexArrays(1, &array);
 
         /// <summary>
         /// Specify point parameters.
         /// </summary>
         /// <param name="paramName">Specifies a single-valued point parameter.<para>GL_POINT_FADE_THRESHOLD_SIZE, and GL_POINT_SPRITE_COORD_ORIGIN are accepted.</para></param>
         /// <param name="param">Specifies the value that paramName will be set to.</param>
-        public static void glPointParameterf(int paramName, float param)
-        {
-            _glPointParameterf(paramName, param);
-        }
+        public static void glPointParameterf(int paramName, float param) => _glPointParameterf(paramName, param);
 
         /// <summary>
         /// Specify point parameters.
         /// </summary>
         /// <param name="paramName">Specifies a single-valued point parameter.<para>GL_POINT_FADE_THRESHOLD_SIZE, and GL_POINT_SPRITE_COORD_ORIGIN are accepted.</para></param>
         /// <param name="param">Specifies the value that paramName will be set to.</param>
-        public static void glPointParameteri(int paramName, int param)
-        {
-            _glPointParameteri(paramName, param);
-        }
+        public static void glPointParameteri(int paramName, int param) => _glPointParameteri(paramName, param);
 
         /// <summary>
         /// Specify point parameters.
         /// </summary>
         /// <param name="paramName">Specifies a single-valued point parameter.<para>GL_POINT_FADE_THRESHOLD_SIZE, and GL_POINT_SPRITE_COORD_ORIGIN are accepted.</para></param>
         /// <param name="args">A pointer to an array where the value or values to be assigned to paramName are stored.</param>
-        public static void glPointParameterfv(int paramName, /*const*/ float* args)
-        {
-            _glPointParameterfv(paramName, args);
-        }
+        public static void glPointParameterfv(int paramName, /*const*/ float* args) => _glPointParameterfv(paramName, args);
 
         /// <summary>
         /// Specify point parameters.
         /// </summary>
         /// <param name="paramName">Specifies a single-valued point parameter.<para>GL_POINT_FADE_THRESHOLD_SIZE, and GL_POINT_SPRITE_COORD_ORIGIN are accepted.</para></param>
         /// <param name="args">A pointer to an array where the value or values to be assigned to paramName are stored.</param>
-        public static void glPointParameteriv(int paramName, /*const*/ int* args)
-        {
-            _glPointParameteriv(paramName, args);
-        }
+        public static void glPointParameteriv(int paramName, /*const*/ int* args) => _glPointParameteriv(paramName, args);
 
         /// <summary>
         /// Specify point parameters.
@@ -4283,10 +3650,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameteri(uint sampler, int paramName, int param)
-        {
-            _glSamplerParameteri(sampler, paramName, param);
-        }
+        public static void glSamplerParameteri(uint sampler, int paramName, int param) => _glSamplerParameteri(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4294,10 +3658,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameterf(uint sampler, int paramName, float param)
-        {
-            _glSamplerParameterf(sampler, paramName, param);
-        }
+        public static void glSamplerParameterf(uint sampler, int paramName, float param) => _glSamplerParameterf(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4333,10 +3694,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameteriv(uint sampler, int paramName, /*const*/ int* param)
-        {
-            _glSamplerParameteriv(sampler, paramName, param);
-        }
+        public static void glSamplerParameteriv(uint sampler, int paramName, /*const*/ int* param) => _glSamplerParameteriv(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4344,10 +3702,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameterfv(uint sampler, int paramName, /*const*/ float* param)
-        {
-            _glSamplerParameterfv(sampler, paramName, param);
-        }
+        public static void glSamplerParameterfv(uint sampler, int paramName, /*const*/ float* param) => _glSamplerParameterfv(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4355,10 +3710,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameterIiv(uint sampler, int paramName, /*const*/ int* param)
-        {
-            _glSamplerParameterIiv(sampler, paramName, param);
-        }
+        public static void glSamplerParameterIiv(uint sampler, int paramName, /*const*/ int* param) => _glSamplerParameterIiv(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4366,10 +3718,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies the sampler object whose parameter to modify.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="param">The value to set.</param>
-        public static void glSamplerParameterIuiv(uint sampler, int paramName, /*const*/ uint* param)
-        {
-            _glSamplerParameterIuiv(sampler, paramName, param);
-        }
+        public static void glSamplerParameterIuiv(uint sampler, int paramName, /*const*/ uint* param) => _glSamplerParameterIuiv(sampler, paramName, param);
 
         /// <summary>
         ///     Set sampler parameters.
@@ -4404,10 +3753,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The value.</param>
-        public static void glUniform1f(int location, float v0)
-        {
-            _glUniform1f(location, v0);
-        }
+        public static void glUniform1f(int location, float v0) => _glUniform1f(location, v0);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4415,10 +3761,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
-        public static void glUniform2f(int location, float v0, float v1)
-        {
-            _glUniform2f(location, v0, v1);
-        }
+        public static void glUniform2f(int location, float v0, float v1) => _glUniform2f(location, v0, v1);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4427,10 +3770,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
-        public static void glUniform3f(int location, float v0, float v1, float v2)
-        {
-            _glUniform3f(location, v0, v1, v2);
-        }
+        public static void glUniform3f(int location, float v0, float v1, float v2) => _glUniform3f(location, v0, v1, v2);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4440,20 +3780,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
         /// <param name="v3">The fourth value.</param>
-        public static void glUniform4f(int location, float v0, float v1, float v2, float v3)
-        {
-            _glUniform4f(location, v0, v1, v2, v3);
-        }
+        public static void glUniform4f(int location, float v0, float v1, float v2, float v3) => _glUniform4f(location, v0, v1, v2, v3);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
         /// </summary>
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The first value.</param>
-        public static void glUniform1ui(int location, uint v0)
-        {
-            _glUniform1ui(location, v0);
-        }
+        public static void glUniform1ui(int location, uint v0) => _glUniform1ui(location, v0);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4461,10 +3795,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
-        public static void glUniform2ui(int location, uint v0, uint v1)
-        {
-            _glUniform2ui(location, v0, v1);
-        }
+        public static void glUniform2ui(int location, uint v0, uint v1) => _glUniform2ui(location, v0, v1);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4473,10 +3804,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
-        public static void glUniform3ui(int location, uint v0, uint v1, uint v2)
-        {
-            _glUniform3ui(location, v0, v1, v2);
-        }
+        public static void glUniform3ui(int location, uint v0, uint v1, uint v2) => _glUniform3ui(location, v0, v1, v2);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4486,20 +3814,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
         /// <param name="v3">The fourth value.</param>
-        public static void glUniform4ui(int location, uint v0, uint v1, uint v2, uint v3)
-        {
-            _glUniform4ui(location, v0, v1, v2, v3);
-        }
+        public static void glUniform4ui(int location, uint v0, uint v1, uint v2, uint v3) => _glUniform4ui(location, v0, v1, v2, v3);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
         /// </summary>
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The first value.</param>
-        public static void glUniform1i(int location, int v0)
-        {
-            _glUniform1i(location, v0);
-        }
+        public static void glUniform1i(int location, int v0) => _glUniform1i(location, v0);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4507,10 +3829,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
-        public static void glUniform2i(int location, int v0, int v1)
-        {
-            _glUniform2i(location, v0, v1);
-        }
+        public static void glUniform2i(int location, int v0, int v1) => _glUniform2i(location, v0, v1);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4519,10 +3838,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v0">The first value.</param>
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
-        public static void glUniform3i(int location, int v0, int v1, int v2)
-        {
-            _glUniform3i(location, v0, v1, v2);
-        }
+        public static void glUniform3i(int location, int v0, int v1, int v2) => _glUniform3i(location, v0, v1, v2);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4532,10 +3848,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="v1">The second value.</param>
         /// <param name="v2">The third value.</param>
         /// <param name="v3">The fourth value.</param>
-        public static void glUniform4i(int location, int v0, int v1, int v2, int v3)
-        {
-            _glUniform4i(location, v0, v1, v2, v3);
-        }
+        public static void glUniform4i(int location, int v0, int v1, int v2, int v3) => _glUniform4i(location, v0, v1, v2, v3);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4543,10 +3856,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform1fv(int location, int count, /*const*/ float* value)
-        {
-            _glUniform1fv(location, count, value);
-        }
+        public static void glUniform1fv(int location, int count, /*const*/ float* value) => _glUniform1fv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4554,10 +3864,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform2fv(int location, int count, /*const*/ float* value)
-        {
-            _glUniform2fv(location, count, value);
-        }
+        public static void glUniform2fv(int location, int count, /*const*/ float* value) => _glUniform2fv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4565,10 +3872,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform3fv(int location, int count, /*const*/ float* value)
-        {
-            _glUniform3fv(location, count, value);
-        }
+        public static void glUniform3fv(int location, int count, /*const*/ float* value) => _glUniform3fv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4576,10 +3880,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform4fv(int location, int count, /*const*/ float* value)
-        {
-            _glUniform4fv(location, count, value);
-        }
+        public static void glUniform4fv(int location, int count, /*const*/ float* value) => _glUniform4fv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4643,10 +3944,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform1iv(int location, int count, /*const*/ int* value)
-        {
-            _glUniform1iv(location, count, value);
-        }
+        public static void glUniform1iv(int location, int count, /*const*/ int* value) => _glUniform1iv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4654,10 +3952,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform2iv(int location, int count, /*const*/ int* value)
-        {
-            _glUniform2iv(location, count, value);
-        }
+        public static void glUniform2iv(int location, int count, /*const*/ int* value) => _glUniform2iv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4665,10 +3960,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform3iv(int location, int count, /*const*/ int* value)
-        {
-            _glUniform3iv(location, count, value);
-        }
+        public static void glUniform3iv(int location, int count, /*const*/ int* value) => _glUniform3iv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4676,10 +3968,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform4iv(int location, int count, /*const*/ int* value)
-        {
-            _glUniform4iv(location, count, value);
-        }
+        public static void glUniform4iv(int location, int count, /*const*/ int* value) => _glUniform4iv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4743,10 +4032,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform1uiv(int location, int count, /*const*/ uint* value)
-        {
-            _glUniform1uiv(location, count, value);
-        }
+        public static void glUniform1uiv(int location, int count, /*const*/ uint* value) => _glUniform1uiv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4754,10 +4040,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform2uiv(int location, int count, /*const*/ uint* value)
-        {
-            _glUniform2uiv(location, count, value);
-        }
+        public static void glUniform2uiv(int location, int count, /*const*/ uint* value) => _glUniform2uiv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4765,10 +4048,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform3uiv(int location, int count, /*const*/ uint* value)
-        {
-            _glUniform3uiv(location, count, value);
-        }
+        public static void glUniform3uiv(int location, int count, /*const*/ uint* value) => _glUniform3uiv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4776,10 +4056,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="location">Specifies the location of the uniform value to be modified.</param>
         /// <param name="count">Specifies the number of elements that are to be modified.</param>
         /// <param name="value">The values to set.</param>
-        public static void glUniform4uiv(int location, int count, /*const*/ uint* value)
-        {
-            _glUniform4uiv(location, count, value);
-        }
+        public static void glUniform4uiv(int location, int count, /*const*/ uint* value) => _glUniform4uiv(location, count, value);
 
         /// <summary>
         ///     Specify the value of a uniform variable for the current program object.
@@ -4850,10 +4127,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP1ui(int texture, int type, uint coords)
-        {
-            _glMultiTexCoordP1ui(texture, type, coords);
-        }
+        public static void glMultiTexCoordP1ui(int texture, int type, uint coords) => _glMultiTexCoordP1ui(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4868,10 +4142,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP2ui(int texture, int type, uint coords)
-        {
-            _glMultiTexCoordP2ui(texture, type, coords);
-        }
+        public static void glMultiTexCoordP2ui(int texture, int type, uint coords) => _glMultiTexCoordP2ui(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4886,10 +4157,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP3ui(int texture, int type, uint coords)
-        {
-            _glMultiTexCoordP3ui(texture, type, coords);
-        }
+        public static void glMultiTexCoordP3ui(int texture, int type, uint coords) => _glMultiTexCoordP3ui(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4904,10 +4172,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP4ui(int texture, int type, uint coords)
-        {
-            _glMultiTexCoordP4ui(texture, type, coords);
-        }
+        public static void glMultiTexCoordP4ui(int texture, int type, uint coords) => _glMultiTexCoordP4ui(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4922,10 +4187,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP1uiv(int texture, int type, /*const*/ uint* coords)
-        {
-            _glMultiTexCoordP1uiv(texture, type, coords);
-        }
+        public static void glMultiTexCoordP1uiv(int texture, int type, /*const*/ uint* coords) => _glMultiTexCoordP1uiv(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4940,10 +4202,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP2uiv(int texture, int type, /*const*/ uint* coords)
-        {
-            _glMultiTexCoordP2uiv(texture, type, coords);
-        }
+        public static void glMultiTexCoordP2uiv(int texture, int type, /*const*/ uint* coords) => _glMultiTexCoordP2uiv(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4958,10 +4217,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP3uiv(int texture, int type, /*const*/ uint* coords)
-        {
-            _glMultiTexCoordP3uiv(texture, type, coords);
-        }
+        public static void glMultiTexCoordP3uiv(int texture, int type, /*const*/ uint* coords) => _glMultiTexCoordP3uiv(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -4976,10 +4232,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </param>
         /// <param name="type">The data type.</param>
         /// <param name="coords">The value of the coordinates to set.</param>
-        public static void glMultiTexCoordP4uiv(int texture, int type, /*const*/ uint* coords)
-        {
-            _glMultiTexCoordP4uiv(texture, type, coords);
-        }
+        public static void glMultiTexCoordP4uiv(int texture, int type, /*const*/ uint* coords) => _glMultiTexCoordP4uiv(texture, type, coords);
 
         /// <summary>
         ///     Set the current texture coordinates.
@@ -5070,20 +4323,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">A packed value.</param>
-        public static void glTexCoordP1ui(int type, uint coords)
-        {
-            _glTexCoordP1ui(type, coords);
-        }
+        public static void glTexCoordP1ui(int type, uint coords) => _glTexCoordP1ui(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">Specifies a pointer to an array of packed elements.</param>
-        public static void glTexCoordP1uiv(int type, /*const*/ uint* coords)
-        {
-            _glTexCoordP1uiv(type, coords);
-        }
+        public static void glTexCoordP1uiv(int type, /*const*/ uint* coords) => _glTexCoordP1uiv(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
@@ -5103,20 +4350,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">A packed value.</param>
-        public static void glTexCoordP2ui(int type, uint coords)
-        {
-            _glTexCoordP2ui(type, coords);
-        }
+        public static void glTexCoordP2ui(int type, uint coords) => _glTexCoordP2ui(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">An array of packed elements.</param>
-        public static void glTexCoordP2uiv(int type, /*const*/ uint* coords)
-        {
-            _glTexCoordP2uiv(type, coords);
-        }
+        public static void glTexCoordP2uiv(int type, /*const*/ uint* coords) => _glTexCoordP2uiv(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
@@ -5136,20 +4377,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">A packed value.</param>
-        public static void glTexCoordP3ui(int type, uint coords)
-        {
-            _glTexCoordP3ui(type, coords);
-        }
+        public static void glTexCoordP3ui(int type, uint coords) => _glTexCoordP3ui(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">An array of packed elements.</param>
-        public static void glTexCoordP3uiv(int type, /*const*/ uint* coords)
-        {
-            _glTexCoordP3uiv(type, coords);
-        }
+        public static void glTexCoordP3uiv(int type, /*const*/ uint* coords) => _glTexCoordP3uiv(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
@@ -5169,20 +4404,14 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">A packed value.</param>
-        public static void glTexCoordP4ui(int type, uint coords)
-        {
-            _glTexCoordP4ui(type, coords);
-        }
+        public static void glTexCoordP4ui(int type, uint coords) => _glTexCoordP4ui(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
         /// </summary>
         /// <param name="type">Specifies the texture unit whose coordinates should be modified.<para>The number of texture units is implementation dependent, but must be at least two. Symbolic constant must be one of GL_TEXTUREi, where i ranges from 0 to GL_MAX_TEXTURE_COORDS - 1, which is an implementation-dependent value.</para></param>
         /// <param name="coords">An array of packed elements.</param>
-        public static void glTexCoordP4uiv(int type, /*const*/ uint* coords)
-        {
-            _glTexCoordP4uiv(type, coords);
-        }
+        public static void glTexCoordP4uiv(int type, /*const*/ uint* coords) => _glTexCoordP4uiv(type, coords);
 
         /// <summary>
         /// Set the current texture coordinates.
@@ -5202,30 +4431,21 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The value.</param>
-        public static void glVertexAttrib1d(uint index, double x)
-        {
-            _glVertexAttrib1d(index, x);
-        }
+        public static void glVertexAttrib1d(uint index, double x) => _glVertexAttrib1d(index, x);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The value.</param>
-        public static void glVertexAttrib1f(uint index, float x)
-        {
-            _glVertexAttrib1f(index, x);
-        }
+        public static void glVertexAttrib1f(uint index, float x) => _glVertexAttrib1f(index, x);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The value.</param>
-        public static void glVertexAttrib1s(uint index, short x)
-        {
-            _glVertexAttrib1s(index, x);
-        }
+        public static void glVertexAttrib1s(uint index, short x) => _glVertexAttrib1s(index, x);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5233,10 +4453,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
-        public static void glVertexAttrib2d(uint index, double x, double y)
-        {
-            _glVertexAttrib2d(index, x, y);
-        }
+        public static void glVertexAttrib2d(uint index, double x, double y) => _glVertexAttrib2d(index, x, y);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5244,10 +4461,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
-        public static void glVertexAttrib2f(uint index, float x, float y)
-        {
-            _glVertexAttrib2f(index, x, y);
-        }
+        public static void glVertexAttrib2f(uint index, float x, float y) => _glVertexAttrib2f(index, x, y);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5255,10 +4469,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
-        public static void glVertexAttrib2s(uint index, short x, short y)
-        {
-            _glVertexAttrib2s(index, x, y);
-        }
+        public static void glVertexAttrib2s(uint index, short x, short y) => _glVertexAttrib2s(index, x, y);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5267,10 +4478,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
-        public static void glVertexAttrib3d(uint index, double x, double y, double z)
-        {
-            _glVertexAttrib3d(index, x, y, z);
-        }
+        public static void glVertexAttrib3d(uint index, double x, double y, double z) => _glVertexAttrib3d(index, x, y, z);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5279,10 +4487,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
-        public static void glVertexAttrib3f(uint index, float x, float y, float z)
-        {
-            _glVertexAttrib3f(index, x, y, z);
-        }
+        public static void glVertexAttrib3f(uint index, float x, float y, float z) => _glVertexAttrib3f(index, x, y, z);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5291,10 +4496,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
-        public static void glVertexAttrib3s(uint index, short x, short y, short z)
-        {
-            _glVertexAttrib3s(index, x, y, z);
-        }
+        public static void glVertexAttrib3s(uint index, short x, short y, short z) => _glVertexAttrib3s(index, x, y, z);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5304,10 +4506,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
-        public static void glVertexAttrib4Nub(uint index, byte x, byte y, byte z, byte w)
-        {
-            _glVertexAttrib4Nub(index, x, y, z, w);
-        }
+        public static void glVertexAttrib4Nub(uint index, byte x, byte y, byte z, byte w) => _glVertexAttrib4Nub(index, x, y, z, w);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5317,10 +4516,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
-        public static void glVertexAttrib4d(uint index, double x, double y, double z, double w)
-        {
-            _glVertexAttrib4d(index, x, y, z, w);
-        }
+        public static void glVertexAttrib4d(uint index, double x, double y, double z, double w) => _glVertexAttrib4d(index, x, y, z, w);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5330,10 +4526,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
-        public static void glVertexAttrib4f(uint index, float x, float y, float z, float w)
-        {
-            _glVertexAttrib4f(index, x, y, z, w);
-        }
+        public static void glVertexAttrib4f(uint index, float x, float y, float z, float w) => _glVertexAttrib4f(index, x, y, z, w);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5343,207 +4536,144 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
-        public static void glVertexAttrib4s(uint index, short x, short y, short z, short w)
-        {
-            _glVertexAttrib4s(index, x, y, z, w);
-        }
+        public static void glVertexAttrib4s(uint index, short x, short y, short z, short w) => _glVertexAttrib4s(index, x, y, z, w);
 
         /// <summary>
         ///     Disable a generic vertex attribute array.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be disabled.</param>
-        public static void glDisableVertexAttribArray(uint index)
-        {
-            _glDisableVertexAttribArray(index);
-        }
+        public static void glDisableVertexAttribArray(uint index) => _glDisableVertexAttribArray(index);
 
         /// <summary>
         ///     Enable a generic vertex attribute array.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be disabled.</param>
-        public static void glEnableVertexAttribArray(uint index)
-        {
-            _glEnableVertexAttribArray(index);
-        }
+        public static void glEnableVertexAttribArray(uint index) => _glEnableVertexAttribArray(index);
 
         /// <summary>
         ///     Specify the primitive restart index.
         /// </summary>
         /// <param name="index">Specifies the value to be interpreted as the primitive restart index.</param>
-        public static void glPrimitiveRestartIndex(uint index)
-        {
-            _glPrimitiveRestartIndex(index);
-        }
+        public static void glPrimitiveRestartIndex(uint index) => _glPrimitiveRestartIndex(index);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib1dv(uint index, /*const*/ double* v)
-        {
-            _glVertexAttrib1dv(index, v);
-        }
+        public static void glVertexAttrib1dv(uint index, /*const*/ double* v) => _glVertexAttrib1dv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib1fv(uint index, /*const*/ float* v)
-        {
-            _glVertexAttrib1fv(index, v);
-        }
+        public static void glVertexAttrib1fv(uint index, /*const*/ float* v) => _glVertexAttrib1fv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib1sv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttrib1sv(index, v);
-        }
+        public static void glVertexAttrib1sv(uint index, /*const*/ short* v) => _glVertexAttrib1sv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib2dv(uint index, /*const*/ double* v)
-        {
-            _glVertexAttrib2dv(index, v);
-        }
+        public static void glVertexAttrib2dv(uint index, /*const*/ double* v) => _glVertexAttrib2dv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib2fv(uint index, /*const*/ float* v)
-        {
-            _glVertexAttrib2fv(index, v);
-        }
+        public static void glVertexAttrib2fv(uint index, /*const*/ float* v) => _glVertexAttrib2fv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib2sv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttrib2sv(index, v);
-        }
+        public static void glVertexAttrib2sv(uint index, /*const*/ short* v) => _glVertexAttrib2sv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib3dv(uint index, /*const*/ double* v)
-        {
-            _glVertexAttrib3dv(index, v);
-        }
+        public static void glVertexAttrib3dv(uint index, /*const*/ double* v) => _glVertexAttrib3dv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib3fv(uint index, /*const*/ float* v)
-        {
-            _glVertexAttrib3fv(index, v);
-        }
+        public static void glVertexAttrib3fv(uint index, /*const*/ float* v) => _glVertexAttrib3fv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib3sv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttrib3sv(index, v);
-        }
+        public static void glVertexAttrib3sv(uint index, /*const*/ short* v) => _glVertexAttrib3sv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4bv(uint index, /*const*/ sbyte* v)
-        {
-            _glVertexAttrib4bv(index, v);
-        }
+        public static void glVertexAttrib4bv(uint index, /*const*/ sbyte* v) => _glVertexAttrib4bv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4dv(uint index, /*const*/ double* v)
-        {
-            _glVertexAttrib4dv(index, v);
-        }
+        public static void glVertexAttrib4dv(uint index, /*const*/ double* v) => _glVertexAttrib4dv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4fv(uint index, /*const*/ float* v)
-        {
-            _glVertexAttrib4fv(index, v);
-        }
+        public static void glVertexAttrib4fv(uint index, /*const*/ float* v) => _glVertexAttrib4fv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4iv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttrib4iv(index, v);
-        }
+        public static void glVertexAttrib4iv(uint index, /*const*/ int* v) => _glVertexAttrib4iv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4sv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttrib4sv(index, v);
-        }
+        public static void glVertexAttrib4sv(uint index, /*const*/ short* v) => _glVertexAttrib4sv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4ubv(uint index, /*const*/ byte* v)
-        {
-            _glVertexAttrib4ubv(index, v);
-        }
+        public static void glVertexAttrib4ubv(uint index, /*const*/ byte* v) => _glVertexAttrib4ubv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4uiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttrib4uiv(index, v);
-        }
+        public static void glVertexAttrib4uiv(uint index, /*const*/ uint* v) => _glVertexAttrib4uiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
         /// </summary>
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
-        public static void glVertexAttrib4usv(uint index, /*const*/ ushort* v)
-        {
-            _glVertexAttrib4usv(index, v);
-        }
+        public static void glVertexAttrib4usv(uint index, /*const*/ ushort* v) => _glVertexAttrib4usv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5773,10 +4903,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Nbv(uint index, /*const*/ sbyte* v)
-        {
-            _glVertexAttrib4Nbv(index, v);
-        }
+        public static void glVertexAttrib4Nbv(uint index, /*const*/ sbyte* v) => _glVertexAttrib4Nbv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5784,10 +4911,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Niv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttrib4Niv(index, v);
-        }
+        public static void glVertexAttrib4Niv(uint index, /*const*/ int* v) => _glVertexAttrib4Niv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5795,10 +4919,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Nsv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttrib4Nsv(index, v);
-        }
+        public static void glVertexAttrib4Nsv(uint index, /*const*/ short* v) => _glVertexAttrib4Nsv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5806,10 +4927,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Nubv(uint index, /*const*/ byte* v)
-        {
-            _glVertexAttrib4Nubv(index, v);
-        }
+        public static void glVertexAttrib4Nubv(uint index, /*const*/ byte* v) => _glVertexAttrib4Nubv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5817,10 +4935,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Nuiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttrib4Nuiv(index, v);
-        }
+        public static void glVertexAttrib4Nuiv(uint index, /*const*/ uint* v) => _glVertexAttrib4Nuiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5828,10 +4943,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be scaled to normalized values.</remarks>
-        public static void glVertexAttrib4Nusv(uint index, /*const*/ ushort* v)
-        {
-            _glVertexAttrib4Nusv(index, v);
-        }
+        public static void glVertexAttrib4Nusv(uint index, /*const*/ ushort* v) => _glVertexAttrib4Nusv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -5938,10 +5050,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Specifies a offset of the first component of the first generic vertex attribute in the array in
         ///     the data store of the buffer currently bound to the GL_ARRAY_BUFFER target.
         /// </param>
-        public static void glVertexAttribPointer(uint index, int size, int type, bool normalized, int stride, /*const*/void* pointer)
-        {
-            _glVertexAttribPointer(index, size, type, normalized, stride, pointer);
-        }
+        public static void glVertexAttribPointer(uint index, int size, int type, bool normalized, int stride, /*const*/void* pointer) => _glVertexAttribPointer(index, size, type, normalized, stride, pointer);
 
         /// <summary>
         ///     Define an array of generic vertex attribute data
@@ -5964,10 +5073,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Specifies a offset of the first component of the first generic vertex attribute in the array in
         ///     the data store of the buffer currently bound to the GL_ARRAY_BUFFER target.
         /// </param>
-        public static void glVertexAttribPointer(uint index, int size, int type, bool normalized, int stride, IntPtr pointer)
-        {
-            _glVertexAttribPointer(index, size, type, normalized, stride, pointer.ToPointer());
-        }
+        public static void glVertexAttribPointer(uint index, int size, int type, bool normalized, int stride, IntPtr pointer) => _glVertexAttribPointer(index, size, type, normalized, stride, pointer.ToPointer());
 
         /// <summary>
         ///     Return sampler parameter value(s).
@@ -6115,10 +5221,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies name of the sampler object from which to retrieve parameters.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="args">Returns the sampler parameters.</param>
-        public static void glGetSamplerParameteriv(uint sampler, int paramName, int* args)
-        {
-            _glGetSamplerParameteriv(sampler, paramName, args);
-        }
+        public static void glGetSamplerParameteriv(uint sampler, int paramName, int* args) => _glGetSamplerParameteriv(sampler, paramName, args);
 
         /// <summary>
         ///     Return sampler parameter value(s).
@@ -6126,10 +5229,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies name of the sampler object from which to retrieve parameters.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="args">Returns the sampler parameters.</param>
-        public static void glGetSamplerParameterIiv(uint sampler, int paramName, int* args)
-        {
-            _glGetSamplerParameterIiv(sampler, paramName, args);
-        }
+        public static void glGetSamplerParameterIiv(uint sampler, int paramName, int* args) => _glGetSamplerParameterIiv(sampler, paramName, args);
 
         /// <summary>
         ///     Return sampler parameter value(s).
@@ -6137,10 +5237,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies name of the sampler object from which to retrieve parameters.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="args">Returns the sampler parameters.</param>
-        public static void glGetSamplerParameterfv(uint sampler, int paramName, float* args)
-        {
-            _glGetSamplerParameterfv(sampler, paramName, args);
-        }
+        public static void glGetSamplerParameterfv(uint sampler, int paramName, float* args) => _glGetSamplerParameterfv(sampler, paramName, args);
 
         /// <summary>
         ///     Return sampler parameter value(s).
@@ -6148,10 +5245,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="sampler">Specifies name of the sampler object from which to retrieve parameters.</param>
         /// <param name="paramName">Specifies the symbolic name of a sampler parameter.</param>
         /// <param name="args">Returns the sampler parameters.</param>
-        public static void glGetSamplerParameterIuiv(uint sampler, int paramName, uint* args)
-        {
-            _glGetSamplerParameterIuiv(sampler, paramName, args);
-        }
+        public static void glGetSamplerParameterIuiv(uint sampler, int paramName, uint* args) => _glGetSamplerParameterIuiv(sampler, paramName, args);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6159,10 +5253,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The first value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI1i(uint index, int x)
-        {
-            _glVertexAttribI1i(index, x);
-        }
+        public static void glVertexAttribI1i(uint index, int x) => _glVertexAttribI1i(index, x);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6170,10 +5261,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="x">The first value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI1ui(uint index, uint x)
-        {
-            _glVertexAttribI1ui(index, x);
-        }
+        public static void glVertexAttribI1ui(uint index, uint x) => _glVertexAttribI1ui(index, x);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6182,10 +5270,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI2i(uint index, int x, int y)
-        {
-            _glVertexAttribI2i(index, x, y);
-        }
+        public static void glVertexAttribI2i(uint index, int x, int y) => _glVertexAttribI2i(index, x, y);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6194,10 +5279,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="x">The first value.</param>
         /// <param name="y">The second value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI2ui(uint index, uint x, uint y)
-        {
-            _glVertexAttribI2ui(index, x, y);
-        }
+        public static void glVertexAttribI2ui(uint index, uint x, uint y) => _glVertexAttribI2ui(index, x, y);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6207,10 +5289,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI3i(uint index, int x, int y, int z)
-        {
-            _glVertexAttribI3i(index, x, y, z);
-        }
+        public static void glVertexAttribI3i(uint index, int x, int y, int z) => _glVertexAttribI3i(index, x, y, z);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6220,10 +5299,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="y">The second value.</param>
         /// <param name="z">The third value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI3ui(uint index, uint x, uint y, uint z)
-        {
-            _glVertexAttribI3ui(index, x, y, z);
-        }
+        public static void glVertexAttribI3ui(uint index, uint x, uint y, uint z) => _glVertexAttribI3ui(index, x, y, z);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6234,10 +5310,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4i(uint index, int x, int y, int z, int w)
-        {
-            _glVertexAttribI4i(index, x, y, z, w);
-        }
+        public static void glVertexAttribI4i(uint index, int x, int y, int z, int w) => _glVertexAttribI4i(index, x, y, z, w);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6248,10 +5321,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="z">The third value.</param>
         /// <param name="w">The fourth value.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4ui(uint index, uint x, uint y, uint z, uint w)
-        {
-            _glVertexAttribI4ui(index, x, y, z, w);
-        }
+        public static void glVertexAttribI4ui(uint index, uint x, uint y, uint z, uint w) => _glVertexAttribI4ui(index, x, y, z, w);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6259,10 +5329,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI1iv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttribI1iv(index, v);
-        }
+        public static void glVertexAttribI1iv(uint index, /*const*/ int* v) => _glVertexAttribI1iv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6270,10 +5337,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI1uiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttribI1uiv(index, v);
-        }
+        public static void glVertexAttribI1uiv(uint index, /*const*/ uint* v) => _glVertexAttribI1uiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6281,10 +5345,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI2iv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttribI2iv(index, v);
-        }
+        public static void glVertexAttribI2iv(uint index, /*const*/ int* v) => _glVertexAttribI2iv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6292,10 +5353,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI2uiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttribI2uiv(index, v);
-        }
+        public static void glVertexAttribI2uiv(uint index, /*const*/ uint* v) => _glVertexAttribI2uiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6303,10 +5361,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI3iv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttribI3iv(index, v);
-        }
+        public static void glVertexAttribI3iv(uint index, /*const*/ int* v) => _glVertexAttribI3iv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6314,10 +5369,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI3uiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttribI3uiv(index, v);
-        }
+        public static void glVertexAttribI3uiv(uint index, /*const*/ uint* v) => _glVertexAttribI3uiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6325,10 +5377,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4iv(uint index, /*const*/ int* v)
-        {
-            _glVertexAttribI4iv(index, v);
-        }
+        public static void glVertexAttribI4iv(uint index, /*const*/ int* v) => _glVertexAttribI4iv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6336,10 +5385,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4uiv(uint index, /*const*/ uint* v)
-        {
-            _glVertexAttribI4uiv(index, v);
-        }
+        public static void glVertexAttribI4uiv(uint index, /*const*/ uint* v) => _glVertexAttribI4uiv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6347,10 +5393,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4bv(uint index, /*const*/ sbyte* v)
-        {
-            _glVertexAttribI4bv(index, v);
-        }
+        public static void glVertexAttribI4bv(uint index, /*const*/ sbyte* v) => _glVertexAttribI4bv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6358,10 +5401,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4sv(uint index, /*const*/ short* v)
-        {
-            _glVertexAttribI4sv(index, v);
-        }
+        public static void glVertexAttribI4sv(uint index, /*const*/ short* v) => _glVertexAttribI4sv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6369,10 +5409,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4ubv(uint index, /*const*/ byte* v)
-        {
-            _glVertexAttribI4ubv(index, v);
-        }
+        public static void glVertexAttribI4ubv(uint index, /*const*/ byte* v) => _glVertexAttribI4ubv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6380,10 +5417,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the index of the generic vertex attribute to be modified.</param>
         /// <param name="v">A pointer to the vertex data.</param>
         /// <remarks>Values will be extended to fully signed or unsigned integers.</remarks>
-        public static void glVertexAttribI4usv(uint index, /*const*/ ushort* v)
-        {
-            _glVertexAttribI4usv(index, v);
-        }
+        public static void glVertexAttribI4usv(uint index, /*const*/ ushort* v) => _glVertexAttribI4usv(index, v);
 
         /// <summary>
         ///     Specifies the value of a generic vertex attribute.
@@ -6561,40 +5595,28 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     Specify the number of instances that will pass between updates of the generic attribute at slot
         ///     <paramref name="index" />.
         /// </param>
-        public static void glVertexAttribDivisor(uint index, uint divisor)
-        {
-            _glVertexAttribDivisor(index, divisor);
-        }
+        public static void glVertexAttribDivisor(uint index, uint divisor) => _glVertexAttribDivisor(index, divisor);
 
         /// <summary>
         ///     Specified a packed vertex.
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">A pointer to the vertex data.</param>
-        public static void glVertexP2uiv(int type, /*const*/ uint* value)
-        {
-            _glVertexP2uiv(type, value);
-        }
+        public static void glVertexP2uiv(int type, /*const*/ uint* value) => _glVertexP2uiv(type, value);
 
         /// <summary>
         ///     Specified a packed vertex.
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">A pointer to the vertex data.</param>
-        public static void glVertexP3uiv(int type, /*const*/ uint* value)
-        {
-            _glVertexP3uiv(type, value);
-        }
+        public static void glVertexP3uiv(int type, /*const*/ uint* value) => _glVertexP3uiv(type, value);
 
         /// <summary>
         ///     Specified a packed vertex.
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">A pointer to the vertex data.</param>
-        public static void glVertexP4uiv(int type, /*const*/ uint* value)
-        {
-            _glVertexP4uiv(type, value);
-        }
+        public static void glVertexP4uiv(int type, /*const*/ uint* value) => _glVertexP4uiv(type, value);
 
         /// <summary>
         ///     Specified a packed vertex.
@@ -6640,30 +5662,21 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">The vertex data.</param>
-        public static void glVertexP2ui(int type, uint value)
-        {
-            _glVertexP2ui(type, value);
-        }
+        public static void glVertexP2ui(int type, uint value) => _glVertexP2ui(type, value);
 
         /// <summary>
         ///     Specified a packed vertex.
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">The vertex data.</param>
-        public static void glVertexP3ui(int type, uint value)
-        {
-            _glVertexP3ui(type, value);
-        }
+        public static void glVertexP3ui(int type, uint value) => _glVertexP3ui(type, value);
 
         /// <summary>
         ///     Specified a packed vertex.
         /// </summary>
         /// <param name="type">Specify the vertex data type.</param>
         /// <param name="value">The vertex data.</param>
-        public static void glVertexP4ui(int type, uint value)
-        {
-            _glVertexP4ui(type, value);
-        }
+        public static void glVertexP4ui(int type, uint value) => _glVertexP4ui(type, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6678,10 +5691,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">A pointer to the new packed values to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP1uiv(uint index, int type, bool normalized, /*const*/ uint* value)
-        {
-            _glVertexAttribP1uiv(index, type, normalized, value);
-        }
+        public static void glVertexAttribP1uiv(uint index, int type, bool normalized, /*const*/ uint* value) => _glVertexAttribP1uiv(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6696,10 +5706,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">A pointer to the new packed values to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP2uiv(uint index, int type, bool normalized, /*const*/ uint* value)
-        {
-            _glVertexAttribP2uiv(index, type, normalized, value);
-        }
+        public static void glVertexAttribP2uiv(uint index, int type, bool normalized, /*const*/ uint* value) => _glVertexAttribP2uiv(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6714,10 +5721,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">A pointer to the new packed values to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP3uiv(uint index, int type, bool normalized, /*const*/ uint* value)
-        {
-            _glVertexAttribP3uiv(index, type, normalized, value);
-        }
+        public static void glVertexAttribP3uiv(uint index, int type, bool normalized, /*const*/ uint* value) => _glVertexAttribP3uiv(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6732,10 +5736,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">A pointer to the new packed values to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP4uiv(uint index, int type, bool normalized, /*const*/ uint* value)
-        {
-            _glVertexAttribP4uiv(index, type, normalized, value);
-        }
+        public static void glVertexAttribP4uiv(uint index, int type, bool normalized, /*const*/ uint* value) => _glVertexAttribP4uiv(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6834,10 +5835,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">Specifies the new packed value to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP1ui(uint index, int type, bool normalized, uint value)
-        {
-            _glVertexAttribP1ui(index, type, normalized, value);
-        }
+        public static void glVertexAttribP1ui(uint index, int type, bool normalized, uint value) => _glVertexAttribP1ui(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6852,10 +5850,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">Specifies the new packed value to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP2ui(uint index, int type, bool normalized, uint value)
-        {
-            _glVertexAttribP2ui(index, type, normalized, value);
-        }
+        public static void glVertexAttribP2ui(uint index, int type, bool normalized, uint value) => _glVertexAttribP2ui(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6870,10 +5865,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">Specifies the new packed value to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP3ui(uint index, int type, bool normalized, uint value)
-        {
-            _glVertexAttribP3ui(index, type, normalized, value);
-        }
+        public static void glVertexAttribP3ui(uint index, int type, bool normalized, uint value) => _glVertexAttribP3ui(index, type, normalized, value);
 
         /// <summary>
         ///     Specifies the value of a generic packed vertex attribute.
@@ -6888,10 +5880,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         ///     </para>
         /// </param>
         /// <param name="value">Specifies the new packed value to be used for the specified vertex attribute.</param>
-        public static void glVertexAttribP4ui(uint index, int type, bool normalized, uint value)
-        {
-            _glVertexAttribP4ui(index, type, normalized, value);
-        }
+        public static void glVertexAttribP4ui(uint index, int type, bool normalized, uint value) => _glVertexAttribP4ui(index, type, normalized, value);
 
 
         /// <summary>
@@ -6900,10 +5889,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target to which the texture is bound.<para>Must be GL_TEXTURE_BUFFER.</para></param>
         /// <param name="internalFormat">Specifies the internal format of the data in the store belonging to buffer.</param>
         /// <param name="buffer">Specifies the name of the buffer object whose storage to attach to the active buffer texture.</param>
-        public static void glTexBuffer(int target, int internalFormat, uint buffer)
-        {
-            _glTexBuffer(target, internalFormat, buffer);
-        }
+        public static void glTexBuffer(int target, int internalFormat, uint buffer) => _glTexBuffer(target, internalFormat, buffer);
 
         /// <summary>
         /// Query information about an active uniform block.
@@ -6912,10 +5898,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="uniformBlockIndex">Specifies the index of the uniform block within program.</param>
         /// <param name="pname">Specifies the name of the parameter to query.</param>
         /// <param name="args">Specifies the address of a variable to receive the result of the query.</param>
-        public static void glGetActiveUniformBlockiv(uint program, uint uniformBlockIndex, int pname, int* args)
-        {
-            _glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, args);
-        }
+        public static void glGetActiveUniformBlockiv(uint program, uint uniformBlockIndex, int pname, int* args) => _glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, args);
 
         /// <summary>
         /// Query information about an active uniform block.
@@ -6979,10 +5962,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="id">Specifies the name of a query object.</param>
         /// <param name="pname">Specifies the symbolic name of a query object parameter.<para>Accepted values are GL_QUERY_RESULT or GL_QUERY_RESULT_AVAILABLE.</para></param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetQueryObjectiv(uint id, int pname, int* args)
-        {
-            _glGetQueryObjectiv(id, pname, args);
-        }
+        public static void glGetQueryObjectiv(uint id, int pname, int* args) => _glGetQueryObjectiv(id, pname, args);
 
         /// <summary>
         /// Return parameters of a query object.
@@ -6990,10 +5970,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="id">Specifies the name of a query object.</param>
         /// <param name="pname">Specifies the symbolic name of a query object parameter.<para>Accepted values are GL_QUERY_RESULT or GL_QUERY_RESULT_AVAILABLE.</para></param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetQueryObjectuiv(uint id, int pname, uint* args)
-        {
-            _glGetQueryObjectuiv(id, pname, args);
-        }
+        public static void glGetQueryObjectuiv(uint id, int pname, uint* args) => _glGetQueryObjectuiv(id, pname, args);
 
         /// <summary>
         /// Return parameters of a query object.
@@ -7001,10 +5978,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="id">Specifies the name of a query object.</param>
         /// <param name="pname">Specifies the symbolic name of a query object parameter.<para>Accepted values are GL_QUERY_RESULT or GL_QUERY_RESULT_AVAILABLE.</para></param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetQueryObjecti64v(uint id, int pname, long* args)
-        {
-            _glGetQueryObjecti64v(id, pname, args);
-        }
+        public static void glGetQueryObjecti64v(uint id, int pname, long* args) => _glGetQueryObjecti64v(id, pname, args);
 
         /// <summary>
         /// Return parameters of a query object.
@@ -7012,10 +5986,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="id">Specifies the name of a query object.</param>
         /// <param name="pname">Specifies the symbolic name of a query object parameter.<para>Accepted values are GL_QUERY_RESULT or GL_QUERY_RESULT_AVAILABLE.</para></param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetQueryObjectui64v(uint id, int pname, ulong* args)
-        {
-            _glGetQueryObjectui64v(id, pname, args);
-        }
+        public static void glGetQueryObjectui64v(uint id, int pname, ulong* args) => _glGetQueryObjectui64v(id, pname, args);
 
         /// <summary>
         /// Return parameters of a query object.
@@ -7118,10 +6089,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// </summary>
         /// <param name="target">Specifies the framebuffer target of the binding operation.</param>
         /// <param name="framebuffer">Specifies the name of the framebuffer object to bind.</param>
-        public static void glBindFramebuffer(int target, uint framebuffer)
-        {
-            _glBindFramebuffer(target, framebuffer);
-        }
+        public static void glBindFramebuffer(int target, uint framebuffer) => _glBindFramebuffer(target, framebuffer);
 
         /// <summary>
         /// Assign a binding point to an active uniform block.
@@ -7129,10 +6097,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">The name of a program object containing the active uniform block whose binding to assign.</param>
         /// <param name="uniformBlockIndex">The index of the active uniform block within program whose binding to assign.</param>
         /// <param name="uniformBlockBinding">Specifies the binding point to which to bind the uniform block with index uniformBlockIndex within program.</param>
-        public static void glUniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding)
-        {
-            _glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
-        }
+        public static void glUniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding) => _glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
 
         /// <summary>
         /// Return a parameter from a program object.
@@ -7140,10 +6105,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">Specifies the program object to be queried.</param>
         /// <param name="pname">Specifies the object parameter.</param>
         /// <param name="args">Returns the requested object parameter.</param>
-        public static void glGetProgramiv(uint program, int pname, int* args)
-        {
-            _glGetProgramiv(program, pname, args);
-        }
+        public static void glGetProgramiv(uint program, int pname, int* args) => _glGetProgramiv(program, pname, args);
 
         /// <summary>
         /// Return a parameter from a program object.
@@ -7170,10 +6132,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="shader">Specifies the shader object to be queried.</param>
         /// <param name="pname">Specifies the object parameter.<para>Must be GL_SHADER_TYPE, GL_DELETE_STATUS, GL_COMPILE_STATUS, GL_INFO_LOG_LENGTH, or GL_SHADER_SOURCE_LENGTH.</para></param>
         /// <param name="args">Returns the requested object parameter.</param>
-        public static void glGetShaderiv(uint shader, int pname, int* args)
-        {
-            _glGetShaderiv(shader, pname, args);
-        }
+        public static void glGetShaderiv(uint shader, int pname, int* args) => _glGetShaderiv(shader, pname, args);
 
         /// <summary>
         /// Return a parameter from a shader object.
@@ -7200,10 +6159,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies a query object target.</param>
         /// <param name="pname">Specifies the symbolic name of a query object target parameter.<para>Accepted values are GL_CURRENT_QUERY or GL_QUERY_COUNTER_BITS.</para></param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetQueryiv(int target, int pname, int* args)
-        {
-            _glGetQueryiv(target, pname, args);
-        }
+        public static void glGetQueryiv(int target, int pname, int* args) => _glGetQueryiv(target, pname, args);
 
         /// <summary>
         /// Return parameters of a query object target.
@@ -7230,10 +6186,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">Specifies the program object to be queried.</param>
         /// <param name="location">Specifies the location of the uniform variable to be queried.</param>
         /// <param name="args">Returns the value of the specified uniform variable</param>
-        public static void glGetUniformfv(uint program, int location, float* args)
-        {
-            _glGetUniformfv(program, location, args);
-        }
+        public static void glGetUniformfv(uint program, int location, float* args) => _glGetUniformfv(program, location, args);
 
         /// <summary>
         /// Returns the value of a uniform variable.
@@ -7260,10 +6213,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">Specifies the program object to be queried.</param>
         /// <param name="location">Specifies the location of the uniform variable to be queried.</param>
         /// <param name="args">Returns the value of the specified uniform variable</param>
-        public static void glGetUniformuiv(uint program, int location, uint* args)
-        {
-            _glGetUniformuiv(program, location, args);
-        }
+        public static void glGetUniformuiv(uint program, int location, uint* args) => _glGetUniformuiv(program, location, args);
 
         /// <summary>
         /// Returns the value of a uniform variable.
@@ -7290,10 +6240,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="program">Specifies the program object to be queried.</param>
         /// <param name="location">Specifies the location of the uniform variable to be queried.</param>
         /// <param name="args">Returns the value of the specified uniform variable</param>
-        public static void glGetUniformiv(uint program, int location, int* args)
-        {
-            _glGetUniformiv(program, location, args);
-        }
+        public static void glGetUniformiv(uint program, int location, int* args) => _glGetUniformiv(program, location, args);
 
         /// <summary>
         /// Returns the value of a uniform variable.
@@ -7322,10 +6269,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="readOffset">Specifies the offset, in basic machine units, within the data store of the source buffer object at which data will be read.</param>
         /// <param name="writeOffset">Specifies the offset, in basic machine units, within the data store of the destination buffer object at which data will be written.</param>
         /// <param name="size">Specifies the size, in basic machine units, of the data to be copied from the source buffer object to the destination buffer object.</param>
-        public static void glCopyBufferSubData(int readTarget, int writeTarget, int readOffset, int writeOffset, int size)
-        {
-            _glCopyBufferSubData(readTarget, writeTarget, new IntPtr(readOffset), new IntPtr(writeOffset), new IntPtr(size));
-        }
+        public static void glCopyBufferSubData(int readTarget, int writeTarget, int readOffset, int writeOffset, int size) => _glCopyBufferSubData(readTarget, writeTarget, new IntPtr(readOffset), new IntPtr(writeOffset), new IntPtr(size));
 
         /// <summary>
         /// Copy all or part of the data store of a buffer object to the data store of another buffer object.
@@ -7335,10 +6279,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="readOffset">Specifies the offset, in basic machine units, within the data store of the source buffer object at which data will be read.</param>
         /// <param name="writeOffset">Specifies the offset, in basic machine units, within the data store of the destination buffer object at which data will be written.</param>
         /// <param name="size">Specifies the size, in basic machine units, of the data to be copied from the source buffer object to the destination buffer object.</param>
-        public static void glCopyBufferSubData(int readTarget, int writeTarget, long readOffset, long writeOffset, long size)
-        {
-            _glCopyBufferSubData(readTarget, writeTarget, new IntPtr(readOffset), new IntPtr(writeOffset), new IntPtr(size));
-        }
+        public static void glCopyBufferSubData(int readTarget, int writeTarget, long readOffset, long writeOffset, long size) => _glCopyBufferSubData(readTarget, writeTarget, new IntPtr(readOffset), new IntPtr(writeOffset), new IntPtr(size));
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7346,10 +6287,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the generic vertex attribute parameter to be queried.</param>
         /// <param name="pname">Specifies the symbolic name of the vertex attribute parameter to be queried. </param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetVertexAttribdv(uint index, int pname, double* args)
-        {
-            _glGetVertexAttribdv(index, pname, args);
-        }
+        public static void glGetVertexAttribdv(uint index, int pname, double* args) => _glGetVertexAttribdv(index, pname, args);
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7357,10 +6295,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the generic vertex attribute parameter to be queried.</param>
         /// <param name="pname">Specifies the symbolic name of the vertex attribute parameter to be queried. </param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetVertexAttribfv(uint index, int pname, float* args)
-        {
-            _glGetVertexAttribfv(index, pname, args);
-        }
+        public static void glGetVertexAttribfv(uint index, int pname, float* args) => _glGetVertexAttribfv(index, pname, args);
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7368,10 +6303,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the generic vertex attribute parameter to be queried.</param>
         /// <param name="pname">Specifies the symbolic name of the vertex attribute parameter to be queried. </param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetVertexAttribiv(uint index, int pname, int* args)
-        {
-            _glGetVertexAttribiv(index, pname, args);
-        }
+        public static void glGetVertexAttribiv(uint index, int pname, int* args) => _glGetVertexAttribiv(index, pname, args);
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7379,10 +6311,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the generic vertex attribute parameter to be queried.</param>
         /// <param name="pname">Specifies the symbolic name of the vertex attribute parameter to be queried. </param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetVertexAttribIiv(uint index, int pname, int* args)
-        {
-            _glGetVertexAttribIiv(index, pname, args);
-        }
+        public static void glGetVertexAttribIiv(uint index, int pname, int* args) => _glGetVertexAttribIiv(index, pname, args);
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7390,10 +6319,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="index">Specifies the generic vertex attribute parameter to be queried.</param>
         /// <param name="pname">Specifies the symbolic name of the vertex attribute parameter to be queried. </param>
         /// <param name="args">Returns the requested data.</param>
-        public static void glGetVertexAttribIuiv(uint index, int pname, uint* args)
-        {
-            _glGetVertexAttribIuiv(index, pname, args);
-        }
+        public static void glGetVertexAttribIuiv(uint index, int pname, uint* args) => _glGetVertexAttribIuiv(index, pname, args);
 
         /// <summary>
         /// Return a generic vertex attribute parameter.
@@ -7498,10 +6424,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="type">Specifies the data type of each component in the array.</param>
         /// <param name="stride">Specifies the byte offset between consecutive generic vertex attributes.<para>If stride is 0, the generic vertex attributes are understood to be tightly packed in the array.</para>The initial value is 0.</param>
         /// <param name="pointer">Specifies a offset of the first component of the first generic vertex attribute in the array in the data store of the buffer currently bound to the GL_ARRAY_BUFFER target.<para>The initial value is 0.</para></param>
-        public static void glVertexAttribIPointer(uint index, int size, int type, int stride, /*const*/ void* pointer)
-        {
-            _glVertexAttribIPointer(index, size, type, stride, pointer);
-        }
+        public static void glVertexAttribIPointer(uint index, int size, int type, int stride, /*const*/ void* pointer) => _glVertexAttribIPointer(index, size, type, stride, pointer);
 
         /// <summary>
         /// Define an array of generic vertex attribute data.
@@ -7511,10 +6434,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="type">Specifies the data type of each component in the array.</param>
         /// <param name="stride">Specifies the byte offset between consecutive generic vertex attributes.<para>If stride is 0, the generic vertex attributes are understood to be tightly packed in the array.</para>The initial value is 0.</param>
         /// <param name="pointer">Specifies a offset of the first component of the first generic vertex attribute in the array in the data store of the buffer currently bound to the GL_ARRAY_BUFFER target.<para>The initial value is 0.</para></param>
-        public static void glVertexAttribIPointer(uint index, int size, int type, int stride, IntPtr pointer)
-        {
-            _glVertexAttribIPointer(index, size, type, stride, pointer.ToPointer());
-        }
+        public static void glVertexAttribIPointer(uint index, int size, int type, int stride, IntPtr pointer) => _glVertexAttribIPointer(index, size, type, stride, pointer.ToPointer());
 
 
         /// <summary>
@@ -7526,10 +6446,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="width">The width of the multisample texture's image, in texels.</param>
         /// <param name="height">The height of the multisample texture's image, in texels.</param>
         /// <param name="fixedsamplelocations">Specifies whether the image will use identical sample locations and the same number of samples for all texels in the image, and the sample locations will not depend on the internal format or size of the image.</param>
-        public static void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, bool fixedsamplelocations)
-        {
-            _glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
-        }
+        public static void glTexImage2DMultisample(int target, int samples, int internalformat, int width, int height, bool fixedsamplelocations) => _glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
 
         /// <summary>
         /// Establish the data storage, format, dimensions, and number of samples of a multisample texture's image
@@ -7541,10 +6458,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="height">The height of the multisample texture's image, in texels.</param>
         /// <param name="depth">The depth of the multisample texture's image, in texels.</param>
         /// <param name="fixedsamplelocations">Specifies whether the image will use identical sample locations and the same number of samples for all texels in the image, and the sample locations will not depend on the internal format or size of the image.</param>
-        public static void glTexImage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, bool fixedsamplelocations)
-        {
-            _glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
-        }
+        public static void glTexImage3DMultisample(int target, int samples, int internalformat, int width, int height, int depth, bool fixedsamplelocations) => _glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7553,10 +6467,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix2fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix2fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix2fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix2fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7565,10 +6476,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix3fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix3fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix3fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix3fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7577,10 +6485,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix4fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix4fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix4fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix4fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7589,10 +6494,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix2x3fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix2x3fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix2x3fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix2x3fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7601,10 +6503,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix3x2fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix3x2fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix3x2fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix3x2fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7613,10 +6512,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix2x4fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix2x4fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix2x4fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix2x4fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7625,10 +6521,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix4x2fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix4x2fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix4x2fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix4x2fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7637,10 +6530,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix3x4fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix3x4fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix3x4fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix3x4fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7649,10 +6539,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">Specifies the number of matrices that are to be modified.</param>
         /// <param name="transpose">Specifies whether to transpose the matrix as the values are loaded into the uniform variable.</param>
         /// <param name="value">Specifies a pointer to an array of count values that will be used to update the specified uniform variable.</param>
-        public static void glUniformMatrix4x3fv(int location, int count, bool transpose, /*const*/ float* value)
-        {
-            _glUniformMatrix4x3fv(location, count, transpose, value);
-        }
+        public static void glUniformMatrix4x3fv(int location, int count, bool transpose, /*const*/ float* value) => _glUniformMatrix4x3fv(location, count, transpose, value);
 
         /// <summary>
         /// Specify the value of a uniform variable for the current program object.
@@ -7795,10 +6682,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target texture.</param>
         /// <param name="pname">Specifies the symbolic name of a single-valued texture parameter.</param>
         /// <param name="args">Specifies the value of the parameters..</param>
-        public static void glTexParameterIiv(int target, int pname, /*const*/ int* args)
-        {
-            _glTexParameterIiv(target, pname, args);
-        }
+        public static void glTexParameterIiv(int target, int pname, /*const*/ int* args) => _glTexParameterIiv(target, pname, args);
 
         /// <summary>
         /// Set texture parameters.
@@ -7806,10 +6690,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target texture.</param>
         /// <param name="pname">Specifies the symbolic name of a single-valued texture parameter.</param>
         /// <param name="args">Specifies the value of the parameters..</param>
-        public static void glTexParameterIuiv(int target, int pname, /*const*/ uint* args)
-        {
-            _glTexParameterIuiv(target, pname, args);
-        }
+        public static void glTexParameterIuiv(int target, int pname, /*const*/ uint* args) => _glTexParameterIuiv(target, pname, args);
 
         /// <summary>
         /// Set texture parameters.
@@ -7847,10 +6728,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="internalformat">Specifies the internal format to use for the renderbuffer object's image.</param>
         /// <param name="width">Specifies the width of the renderbuffer, in pixels.</param>
         /// <param name="height">Specifies the height of the renderbuffer, in pixels.</param>
-        public static void glRenderbufferStorageMultisample(int target, int samples, int internalformat, int width, int height)
-        {
-            _glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
-        }
+        public static void glRenderbufferStorageMultisample(int target, int samples, int internalformat, int width, int height) => _glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
 
         /// <summary>
         /// Draw multiple instances of a range of elements.
@@ -7859,10 +6737,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="first">Specifies the starting index in the enabled arrays.</param>
         /// <param name="count">Specifies the number of indices to be rendered.</param>
         /// <param name="instanceCount">Specifies the number of instances of the specified range of indices to be rendered.</param>
-        public static void glDrawArraysInstanced(int mode, int first, int count, int instanceCount)
-        {
-            _glDrawArraysInstanced(mode, first, count, instanceCount);
-        }
+        public static void glDrawArraysInstanced(int mode, int first, int count, int instanceCount) => _glDrawArraysInstanced(mode, first, count, instanceCount);
 
         /// <summary>
         /// Return the address of the specified generic vertex attribute pointer.
@@ -7894,10 +6769,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the symbolic name of the target texture.</param>
         /// <param name="pname">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">Returns the texture parameters.</param>
-        public static void glGetTexParameterIiv(int target, int pname, int* args)
-        {
-            _glGetTexParameterIiv(target, pname, args);
-        }
+        public static void glGetTexParameterIiv(int target, int pname, int* args) => _glGetTexParameterIiv(target, pname, args);
 
         /// <summary>
         /// Return texture parameter values.
@@ -7905,10 +6777,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the symbolic name of the target texture.</param>
         /// <param name="pname">Specifies the symbolic name of a texture parameter.</param>
         /// <param name="args">Returns the texture parameters.</param>
-        public static void glGetTexParameterIuiv(int target, int pname, uint* args)
-        {
-            _glGetTexParameterIuiv(target, pname, args);
-        }
+        public static void glGetTexParameterIuiv(int target, int pname, uint* args) => _glGetTexParameterIuiv(target, pname, args);
 
         /// <summary>
         /// Return texture parameter values.
@@ -7972,10 +6841,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="uniformIndices">Specifies the address of an array of <paramref name="uniformCount"/> integers containing the indices of uniforms within program whose parameter <paramref name="pname"/> should be queried.</param>
         /// <param name="pname">Specifies the property of each uniform in uniformIndices that should be written into the corresponding element of <paramref name="args"/>.</param>
         /// <param name="args">Specifies the address of an array of <paramref name="uniformCount"/> integers which are to receive the value of <paramref name="pname"/> for each uniform in <paramref name="uniformIndices"/>.</param>
-        public static void glGetActiveUniformsiv(uint program, int uniformCount, /*const*/ uint* uniformIndices, int pname, int* args)
-        {
-            _glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, args);
-        }
+        public static void glGetActiveUniformsiv(uint program, int uniformCount, /*const*/ uint* uniformIndices, int pname, int* args) => _glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, args);
 
 
         /// <summary>
@@ -8003,10 +6869,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target buffer object.<para>Must be GL_ARRAY_BUFFER or GL_ELEMENT_ARRAY_BUFFER.</para></param>
         /// <param name="pname">Specifies the symbolic name of a buffer object parameter.<para>Must be GL_BUFFER_SIZE or GL_BUFFER_USAGE.</para></param>
         /// <param name="args">Returns the requested parameter.</param>
-        public static void glGetBufferParameteriv(int target, int pname, int* args)
-        {
-            _glGetBufferParameteriv(target, pname, args);
-        }
+        public static void glGetBufferParameteriv(int target, int pname, int* args) => _glGetBufferParameteriv(target, pname, args);
 
         /// <summary>
         /// Return parameters of a buffer object.
@@ -8035,10 +6898,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="bufSize">Specifies the size of the buffer whose address is given in <paramref name="values"/>.</param>
         /// <param name="length">Specifies the address of an variable to receive the number of integers placed in <paramref name="values"/>.</param>
         /// <param name="values">Specifies the address of an array to receive the values of the queried parameter.</param>
-        public static void glGetSynciv(IntPtr sync, int pname, int bufSize, int* length, int* values)
-        {
-            _glGetSynciv(sync, pname, bufSize, length, values);
-        }
+        public static void glGetSynciv(IntPtr sync, int pname, int bufSize, int* length, int* values) => _glGetSynciv(sync, pname, bufSize, length, values);
 
         /// <summary>
         /// Query the properties of a sync object.
@@ -8069,10 +6929,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target renderbuffer object.<para>Must be GL_RENDERBUFFER.</para></param>
         /// <param name="pname">Specifies the symbolic name of a renderbuffer object parameter.</param>
         /// <param name="args">Returns the requested parameter.</param>
-        public static void glGetRenderbufferParameteriv(int target, int pname, int* args)
-        {
-            _glGetRenderbufferParameteriv(target, pname, args);
-        }
+        public static void glGetRenderbufferParameteriv(int target, int pname, int* args) => _glGetRenderbufferParameteriv(target, pname, args);
 
         /// <summary>
         /// Return parameters of a renderbuffer object.
@@ -8094,10 +6951,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="pname">Specifies the sample parameter name.<para>Must be GL_SAMPLE_POSITION.</para></param>
         /// <param name="index">Specifies the index of the sample whose position to query.</param>
         /// <param name="val">Specifies the address of an array to receive the position of the sample.</param>
-        public static void glGetMultisamplefv(int pname, uint index, float* val)
-        {
-            _glGetMultisamplefv(pname, index, val);
-        }
+        public static void glGetMultisamplefv(int pname, uint index, float* val) => _glGetMultisamplefv(pname, index, val);
 
         /// <summary>
         /// Retrieve the location of a sample.
@@ -8126,10 +6980,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="type">Specifies the type of the values in indices.<para>Must be one of GL_UNSIGNED_BYTE, GL_UNSIGNED_SHORT, or GL_UNSIGNED_INT.</para></param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="instanceCount">Specifies the number of instances of the specified range of indices to be rendered.</param>
-        public static void glDrawElementsInstanced(int mode, int count, int type, /*const*/ void* indices, int instanceCount)
-        {
-            _glDrawElementsInstanced(mode, count, type, indices, instanceCount);
-        }
+        public static void glDrawElementsInstanced(int mode, int count, int type, /*const*/ void* indices, int instanceCount) => _glDrawElementsInstanced(mode, count, type, indices, instanceCount);
 
 
         /// <summary>
@@ -8185,10 +7036,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="type">Specifies the type of the values in indices.<para>Must be one of GL_UNSIGNED_BYTE, GL_UNSIGNED_SHORT, or GL_UNSIGNED_INT.</para></param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="baseVertex">Specifies a constant that should be added to each element of indices when choosing elements from the enabled vertex arrays.</param>
-        public static void glDrawElementsBaseVertex(int mode, int count, int type, /*const*/ void* indices, int baseVertex)
-        {
-            _glDrawElementsBaseVertex(mode, count, type, indices, baseVertex);
-        }
+        public static void glDrawElementsBaseVertex(int mode, int count, int type, /*const*/ void* indices, int baseVertex) => _glDrawElementsBaseVertex(mode, count, type, indices, baseVertex);
 
 
         /// <summary>
@@ -8246,10 +7094,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="type">Specifies the type of the values in indices.<para>Must be one of GL_UNSIGNED_BYTE, GL_UNSIGNED_SHORT, or GL_UNSIGNED_INT.</para></param>
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="baseVertex">Specifies a constant that should be added to each element of indices when choosing elements from the enabled vertex arrays.</param>
-        public static void glDrawRangeElementsBaseVertex(int mode, uint start, uint end, int count, int type, /*const*/void* indices, int baseVertex)
-        {
-            _glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, baseVertex);
-        }
+        public static void glDrawRangeElementsBaseVertex(int mode, uint start, uint end, int count, int type, /*const*/void* indices, int baseVertex) => _glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, baseVertex);
 
 
         /// <summary>
@@ -8312,10 +7157,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="instanceCount">Specifies the number of instances of the indexed geometry that should be drawn.</param>
         /// <param name="baseVertex">Specifies a constant that should be added to each element of indices when choosing elements from the enabled vertex arrays.</param>
-        public static void glDrawElementsInstancedBaseVertex(int mode, int count, int type, /*const*/ void* indices, int instanceCount, int baseVertex)
-        {
-            _glDrawElementsInstancedBaseVertex(mode, count, type, indices, instanceCount, baseVertex);
-        }
+        public static void glDrawElementsInstancedBaseVertex(int mode, int count, int type, /*const*/ void* indices, int instanceCount, int baseVertex) => _glDrawElementsInstancedBaseVertex(mode, count, type, indices, instanceCount, baseVertex);
 
         /// <summary>
         /// Render multiple instances of a set of primitives from array data with a per-element offset.
@@ -8388,10 +7230,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="target">Specifies the target to which the buffer object is bound.</param>
         /// <param name="pname">Specifies the symbolic name of a buffer object parameter.</param>
         /// <param name="args">Returns the requested parameter.</param>
-        public static void glGetBufferParameteri64v(int target, int pname, long* args)
-        {
-            _glGetBufferParameteri64v(target, pname, args);
-        }
+        public static void glGetBufferParameteri64v(int target, int pname, long* args) => _glGetBufferParameteri64v(target, pname, args);
 
 
         /// <summary>
@@ -8437,10 +7276,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="attachment">Specifies the attachment of the framebuffer object to query.</param>
         /// <param name="pname">Specifies the parameter of attachment to query.</param>
         /// <param name="args">Returns the value of parameter pname for attachment.</param>
-        public static void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, int* args)
-        {
-            _glGetFramebufferAttachmentParameteriv(target, attachment, pname, args);
-        }
+        public static void glGetFramebufferAttachmentParameteriv(int target, int attachment, int pname, int* args) => _glGetFramebufferAttachmentParameteriv(target, attachment, pname, args);
 
         /// <summary>
         /// Retrieve information about attachments of a framebuffer object.
@@ -8471,10 +7307,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="indices">Specifies a pointer to the location where the indices are stored.</param>
         /// <param name="drawCount">Specifies the size of the count, indices and <paramref name="baseVertex"/> arrays.</param>
         /// <param name="baseVertex">Specifies a pointer to the location where the base vertices are stored.</param>
-        public static void glMultiDrawElementsBaseVertex(int mode, /*const*/ int* count, int type, /*const*/void* /*const*/* indices, int drawCount, /*const*/ int* baseVertex)
-        {
-            _glMultiDrawElementsBaseVertex(mode, count, type, indices, drawCount, baseVertex);
-        }
+        public static void glMultiDrawElementsBaseVertex(int mode, /*const*/ int* count, int type, /*const*/void* /*const*/* indices, int drawCount, /*const*/ int* baseVertex) => _glMultiDrawElementsBaseVertex(mode, count, type, indices, drawCount, baseVertex);
 
         /// <summary>
         /// Specify values to record in transform feedback buffers.
@@ -8483,10 +7316,7 @@ xOffset, yOffset, zOffset, width, height, depth, format, type, pixels.ToPointer(
         /// <param name="count">The number of varying variables used for transform feedback.</param>
         /// <param name="varyings">An array of count zero-terminated strings specifying the names of the varying variables to use for transform feedback.</param>
         /// <param name="bufferMode">Identifies the mode used to capture the varying variables when transform feedback is active.<para>ust be GL_INTERLEAVED_ATTRIBS or GL_SEPARATE_ATTRIBS.</para></param>
-        public static void glTransformFeedbackVaryings(uint program, int count, /*const*/ byte** varyings, int bufferMode)
-        {
-            _glTransformFeedbackVaryings(program, count, varyings, bufferMode);
-        }
+        public static void glTransformFeedbackVaryings(uint program, int count, /*const*/ byte** varyings, int bufferMode) => _glTransformFeedbackVaryings(program, count, varyings, bufferMode);
 
         public const int GL_DEPTH_BUFFER_BIT = 0x00000100;
         public const int GL_STENCIL_BUFFER_BIT = 0x00000400;

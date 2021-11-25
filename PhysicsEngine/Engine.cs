@@ -5,35 +5,49 @@ using PhysicsEngine.RenderCamera;
 using PhysicsEngine.Shaders;
 using PhysicsEngine.Structs;
 using PhysicsEngine.Textures;
+using System.Collections.Generic;
+using System.Linq;
 using static OpenGL.GL;
 using static PhysicsEngine.Meshes.Mesh;
 
 namespace PhysicsEngine
 {
+    public class Teste
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+
+        public Teste(string id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+    }
+
     public static class Engine
     {
-        private static Window mainWindow;
-        private static Shader shaderProgram;
-        private static Shader lightShader;
-        private static Camera camera;
-        private static Mesh plane;
-        private static Mesh light;
+        private static Window _mainWindow;
+        private static Shader _shaderProgram;
+        private static Shader _lightShader;
+        private static Camera _camera;
+        private static Mesh _plane;
+        private static Mesh _light;
 
-        private static readonly float[] vertices =
+        private static readonly float[] _vertices =
         {
-            -1.0f, 0.0f,  1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       0.0f, 0.0f,     
-            -1.0f, 0.0f, -1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       0.0f, 1.0f,     
+            -1.0f, 0.0f,  1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       0.0f, 0.0f,
+            -1.0f, 0.0f, -1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       0.0f, 1.0f,
              1.0f, 0.0f, -1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       1.0f, 1.0f,
              1.0f, 0.0f,  1.0f,     0.0f, 1.0f, 0.0f,       1.0f, 1.0f, 1.0f,       1.0f, 0.0f
         };
 
-        private static readonly uint[] indices =
+        private static readonly uint[] _indices =
         {
             0, 1, 2,
             0, 2, 3
         };
 
-        private static readonly float[] lightVertices =
+        private static readonly float[] _lightVertices =
         {
             -0.1f, -0.1f,  0.1f,
             -0.1f, -0.1f, -0.1f,
@@ -45,7 +59,7 @@ namespace PhysicsEngine
              0.1f,  0.1f,  0.1f
         };
 
-        private static readonly uint[] lightIndices =
+        private static readonly uint[] _lightIndices =
         {
             0, 1, 2,
             0, 2, 3,
@@ -64,29 +78,29 @@ namespace PhysicsEngine
         private const int WINDOW_WIDTH = 800;
         private const int WINDOW_HEIGHT = 800;
         private const string WINDOW_TITLE = "3D Physics Engine";
+        private static readonly List<Teste> _roleManager = new List<Teste>();
 
-        public static void Start()
-        {
-            InitializeGl();
-        }
+        public static void Start() => InitializeGl();
+
+        public static List<Teste> GetAllRoles() => _roleManager.Select(role => new Teste(role.Id, role.Name)).ToList();
 
         public static unsafe void Run()
         {
             glEnable(GL_DEPTH_TEST);
 
-            camera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, new vec3(0, 0, 2));
+            _camera = new Camera(WINDOW_WIDTH, WINDOW_HEIGHT, new vec3(0, 0, 2));
 
-            while (!Glfw.WindowShouldClose(mainWindow))
+            while (!Glfw.WindowShouldClose(_mainWindow))
             {
                 SetBackgroundColor(Color.VeryDarkBlue);
 
-                camera.Inputs(mainWindow);
-                camera.UpdateMatrix(45, 0.1f, 100);
+                _camera.Inputs(_mainWindow);
+                _camera.UpdateMatrix(45, 0.1f, 100);
 
-                plane.Draw(shaderProgram, camera);
-                light.Draw(lightShader, camera);
+                _plane.Draw(_shaderProgram, _camera);
+                _light.Draw(_lightShader, _camera);
 
-                Glfw.SwapBuffers(mainWindow);
+                Glfw.SwapBuffers(_mainWindow);
 
                 Glfw.PollEvents();
             }
@@ -94,10 +108,10 @@ namespace PhysicsEngine
 
         public static void End()
         {
-            shaderProgram.Delete();
-            lightShader.Delete();
+            _shaderProgram.Delete();
+            _lightShader.Delete();
 
-            Glfw.DestroyWindow(mainWindow);
+            Glfw.DestroyWindow(_mainWindow);
             Glfw.Terminate();
         }
 
@@ -107,8 +121,8 @@ namespace PhysicsEngine
 
             SetupHints();
 
-            mainWindow = Glfw.CreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, Monitor.None, Window.None);
-            Glfw.MakeContextCurrent(mainWindow);
+            _mainWindow = Glfw.CreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, Monitor.None, Window.None);
+            Glfw.MakeContextCurrent(_mainWindow);
 
             Import(Glfw.GetProcAddress);
             glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -116,14 +130,14 @@ namespace PhysicsEngine
             SetupShaders();
             SetBackgroundColor(Color.VeryDarkBlue);
 
-            Glfw.SwapBuffers(mainWindow);
+            Glfw.SwapBuffers(_mainWindow);
         }
 
         private static unsafe void SetupShaders()
         {
-            shaderProgram = new Shader("Shaders/Defaults/default.vert", "Shaders/Defaults/default.frag");
+            _shaderProgram = new Shader("Shaders/Defaults/default.vert", "Shaders/Defaults/default.frag");
 
-            lightShader = new Shader("Shaders/Defaults/light.vert", "Shaders/Defaults/light.frag");
+            _lightShader = new Shader("Shaders/Defaults/light.vert", "Shaders/Defaults/light.frag");
 
             Texture[] textures =
             {
@@ -131,8 +145,8 @@ namespace PhysicsEngine
                 new Texture("Textures/Images/planksSpec.png", "specular", 1, GL_RED)
             };
 
-            plane = new Mesh(vertices, indices, textures);
-            light = new Mesh(lightVertices, lightIndices, textures, MeshType.Light);
+            _plane = new Mesh(_vertices, _indices, textures);
+            _light = new Mesh(_lightVertices, _lightIndices, textures, MeshType.Light);
 
             vec4 lightColor = new vec4(1f, 1f, 1f, 1f);
             vec3 lightPos = new vec3(0.5f, 0.5f, 0.5f);
@@ -143,13 +157,13 @@ namespace PhysicsEngine
             mat4 objectModel = new mat4(1f);
             objectModel = glm.translate(objectModel, objectPos);
 
-            lightShader.Activate();
-            glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, false, lightModel.to_array());
-            glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
-            shaderProgram.Activate();
-            glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, false, objectModel.to_array());
-            glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
-            glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+            _lightShader.Activate();
+            glUniformMatrix4fv(glGetUniformLocation(_lightShader.ID, "model"), 1, false, lightModel.to_array());
+            glUniform4f(glGetUniformLocation(_lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+            _shaderProgram.Activate();
+            glUniformMatrix4fv(glGetUniformLocation(_shaderProgram.ID, "model"), 1, false, objectModel.to_array());
+            glUniform4f(glGetUniformLocation(_shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+            glUniform3f(glGetUniformLocation(_shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
         }
 
         private static void SetupHints()

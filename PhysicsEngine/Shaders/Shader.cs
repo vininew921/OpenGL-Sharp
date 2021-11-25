@@ -35,20 +35,13 @@ namespace PhysicsEngine.Shaders
             glDeleteShader(fragmentShader);
         }
 
-        public void Activate()
-        {
-            glUseProgram(ID);
-        }
+        public void Activate() => glUseProgram(ID);
 
-        public void Delete()
-        {
-            glDeleteProgram(ID);
-        }
+        public void Delete() => glDeleteProgram(ID);
 
-        public unsafe void CompileErrors(uint shader, string type)
+        public static unsafe void CompileErrors(uint shader, string type)
         {
             int hasCompiled;
-            string infoLog;
 
             if (type != "PROGRAM")
             {
@@ -56,7 +49,7 @@ namespace PhysicsEngine.Shaders
 
                 if (hasCompiled == GL_FALSE)
                 {
-                    infoLog = glGetShaderInfoLog(shader, 1024);
+                    glGetShaderInfoLog(shader, 1024);
                     Console.WriteLine($"SHADER_COMPILATION_ERROR for: {type}");
                 }
             }
@@ -66,7 +59,7 @@ namespace PhysicsEngine.Shaders
 
                 if (hasCompiled == GL_FALSE)
                 {
-                    infoLog = glGetProgramInfoLog(shader, 1024);
+                    glGetProgramInfoLog(shader, 1024);
                     Console.WriteLine($"SHADER_LINKING_ERROR for: {type}");
                 }
             }

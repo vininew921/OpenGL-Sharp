@@ -8,7 +8,7 @@ namespace PhysicsEngine.Textures
     public class Texture
     {
         public uint ID { get; set; }
-        public int unit { get; set; }
+        public int Unit { get; set; }
         public string Type { get; set; }
 
         public unsafe Texture(string imagePath, string texType, int slot, int format)
@@ -17,7 +17,7 @@ namespace PhysicsEngine.Textures
             ID = glGenTexture();
 
             glActiveTexture(GL_TEXTURE0 + slot);
-            unit = slot;
+            Unit = slot;
             glBindTexture(GL_TEXTURE_2D, ID);
 
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -54,18 +54,12 @@ namespace PhysicsEngine.Textures
 
         public void Bind()
         {
-            glActiveTexture(GL_TEXTURE0 + unit);
+            glActiveTexture(GL_TEXTURE0 + Unit);
             glBindTexture(GL_TEXTURE_2D, ID);
         }
 
-        public void Unbind()
-        {
-            glBindTexture(GL_TEXTURE_2D, 0);
-        }
+        public void Unbind() => glBindTexture(GL_TEXTURE_2D, 0);
 
-        public void Delete()
-        {
-            glDeleteTexture(ID);
-        }
+        public void Delete() => glDeleteTexture(ID);
     }
 }
