@@ -1,4 +1,4 @@
-﻿namespace PhysicsEngine.Structs
+﻿namespace Renderer.Structs
 {
     public class Color
     {

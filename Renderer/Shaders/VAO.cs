@@ -1,6 +1,6 @@
 ﻿using static OpenGL.GL;
 
-namespace PhysicsEngine.Shaders
+namespace Renderer.Shaders
 {
     public class VAO
     {

@@ -1,30 +1,16 @@
 ﻿using GLFW;
 using GlmNet;
-using PhysicsEngine.Meshes;
-using PhysicsEngine.RenderCamera;
-using PhysicsEngine.Shaders;
-using PhysicsEngine.Structs;
-using PhysicsEngine.Textures;
-using System.Collections.Generic;
-using System.Linq;
+using Renderer.Meshes;
+using Renderer.RenderCamera;
+using Renderer.Shaders;
+using Renderer.Structs;
+using Renderer.Textures;
 using static OpenGL.GL;
-using static PhysicsEngine.Meshes.Mesh;
+using static Renderer.Meshes.Mesh;
 
-namespace PhysicsEngine
+namespace Renderer
 {
-    public class Teste
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-
-        public Teste(string id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-    }
-
-    public static class Engine
+    public static class Renderer
     {
         private static Window _mainWindow;
         private static Shader _shaderProgram;
@@ -78,11 +64,8 @@ namespace PhysicsEngine
         private const int WINDOW_WIDTH = 800;
         private const int WINDOW_HEIGHT = 800;
         private const string WINDOW_TITLE = "3D Physics Engine";
-        private static readonly List<Teste> _roleManager = new List<Teste>();
 
         public static void Start() => InitializeGl();
-
-        public static List<Teste> GetAllRoles() => _roleManager.Select(role => new Teste(role.Id, role.Name)).ToList();
 
         public static unsafe void Run()
         {

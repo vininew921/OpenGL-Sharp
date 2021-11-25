@@ -1,9 +1,9 @@
-﻿using PhysicsEngine.Shaders;
+﻿using Renderer.Shaders;
 using StbiSharp;
 using System.IO;
 using static OpenGL.GL;
 
-namespace PhysicsEngine.Textures
+namespace Renderer.Textures
 {
     public class Texture
     {

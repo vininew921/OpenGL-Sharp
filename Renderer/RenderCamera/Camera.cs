@@ -1,9 +1,9 @@
 ﻿using GLFW;
 using GlmNet;
-using PhysicsEngine.Shaders;
+using Renderer.Shaders;
 using static OpenGL.GL;
 
-namespace PhysicsEngine.RenderCamera
+namespace Renderer.RenderCamera
 {
     public class Camera
     {

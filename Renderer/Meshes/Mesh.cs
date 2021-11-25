@@ -1,10 +1,10 @@
-﻿using PhysicsEngine.RenderCamera;
-using PhysicsEngine.Shaders;
-using PhysicsEngine.Textures;
+﻿using Renderer.RenderCamera;
+using Renderer.Shaders;
+using Renderer.Textures;
 using System;
 using static OpenGL.GL;
 
-namespace PhysicsEngine.Meshes
+namespace Renderer.Meshes
 {
     public class Mesh
     {
